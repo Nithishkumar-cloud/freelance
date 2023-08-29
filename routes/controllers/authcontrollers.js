@@ -18,6 +18,7 @@ exports.registeruser=async(req,res,next)=>{
     console.log("working");
   const datas=req.body.data;
 const Name = req.body.data.a;
+    console.log(Name);
   const Phone = req.body.data.b;
   const Whatsapp=req.body.data.q;
   // const Image=`${process.env.BACKEND_URL}/uploads/${req.file.originalname}`;
@@ -39,10 +40,10 @@ const Name = req.body.data.a;
  const RequestType=req.body.data.rqtype;
  Aadharcardnumber=await bcrypt.hash(Aadharcardnumber,10);
  sdidudidnumber=await bcrypt.hash(sdidudidnumber,10);
-  if (!(Name && Phone && Address && Aadharcardnumber && sdidudidnumber && Gender &&  DisabilityType && Dateofbirth && Disabilityper && Profession&& Pin&&Pincode &&RequestType&&PermanentAdd &&Whatsapp&&Image)) {
-    // return next(new errorhandler('Please enter email password and name field',400));
-     res.status(400).send("All fields are required");
-  }
+  // if (!(Name && Phone && Address && Aadharcardnumber && sdidudidnumber && Gender &&  DisabilityType && Dateofbirth && Disabilityper && Profession&& Pin&&Pincode &&RequestType&&PermanentAdd &&Whatsapp&&Image)) {
+  //   // return next(new errorhandler('Please enter email password and name field',400));
+  //    res.status(400).send("All fields are required");
+  // }
 //  
  
   const user = await usermodel.create({
