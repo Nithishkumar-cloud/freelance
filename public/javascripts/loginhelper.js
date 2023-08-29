@@ -41,7 +41,7 @@
                }
                
                
-               let a=await axios.post("https://worried-gold-shoulder-pads.cyclic.app/reghelper",{data:detail});
+               let a=await axios.post("https://attractive-pear-apron.cyclic.app/reghelper",{data:detail});
                console.log(a.data);
                localStorage.setItem('sessionidhelper',a.data.ids.sessionIdHelper);
                location.assign("/helperprofile");
@@ -60,7 +60,7 @@
             errordisplay("Please Enter Your PIN");
         }
            else{
-            var c=await axios.post("https://worried-gold-shoulder-pads.cyclic.app/loghelper",{data:details});
+            var c=await axios.post("https://attractive-pear-apron.cyclic.app/loghelper",{data:details});
             //console.log(c.data.userlog.Pin);
             if(c.data.message===""){
                 localStorage.setItem('sessionidhelper',c.data.ids.sessionIdHelper);
