@@ -32,8 +32,12 @@ function choosegen(){
 function choosepro(){
     pr = document.querySelector('option[name="profession"]:checked').value;
     console.log(pr);
-    let speech = new SpeechSynthesisUtterance("your profession"+pr+"selected successfully");
-      speechSynthesis.speak(speech);
+       if(pr===""){
+            errordisplayreg("Please Enter Your Profession");
+        }else{
+            let speech = new SpeechSynthesisUtterance("your profession"+pr+"selected successfully");
+           speechSynthesis.speak(speech);
+        }
 }
 function choosereq(){
       rq = document.querySelector('input[name="requesttype"]:checked').value;
