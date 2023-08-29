@@ -71,22 +71,22 @@
                                             
                                         </div>
                                         <label class="form-label mt-2 fw-semibold" area-labelledby="gen">Gender</label><br>
-                                        <span class="d-none" aria-hidden="false" id="gen">Please select Anyone Gender from Radio Button</span>
+                                        <span class="d-none" aria-hidden="true" id="gen">Please select Anyone Gender from Radio Button</span>
                                         <div class="btn-group mt-2" name="gender">
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype1"
-                                                 value="Male" area-label="aan">
+                                                 value="Male" area-label="aan" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype1" >Male</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype2"
-                                                value="Female" area-label="pen">
+                                                value="Female" area-label="pen" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype2" >Female</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype3"
-                                                value="TransGender" area-label="maatru paalinam">
+                                                value="TransGender" area-label="maatru paalinam" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype3" >Trans<br>Gender</label>
                                             
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype4"
-                                                value="Choose Not To Say" area-label="maatru paalinam">
+                                                value="Choose Not To Say" area-label="maatru paalinam" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype4" >Not<br>To Say</label>
                                         </div>
                                         <div class="mt-2">
@@ -114,21 +114,21 @@
                                         <label class="form-label mt-2 fw-semibold" area-label="kuraipaadu vagai">Disability Type</label><br>
                                         <div class="btn-group mt-2" name="child">
                                             <input type="radio" class="btn-check" name="child" id="radio1"
-                                                 value="From Birth" area-label="siruvaiyathil irunthu">
+                                                 value="From Birth" area-label="siruvaiyathil irunthu" onclick="choosechi()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="radio1" >From Birth</label>
 
                                             <input type="radio" class="btn-check" name="child"  id="radio2"
-                                                value="Acquired Disability" area-label="pathin paruvam">
+                                                value="Acquired Disability" area-label="pathin paruvam" onclick="choosechi()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="radio2" >Acquired Disability</label>
 
                                             <input type="radio" class="btn-check" name="child" id="radio3"
-                                                value="Recently" area-label="samibathil">
+                                                value="Recently" area-label="samibathil" onclick="choosechi()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="radio3" >Recently</label>
                                         </div>
                                         <div class="formper mt-2">
                                             <label class="form-label fw-semibold" for="form1" area-label="kuraipaadu sathavitham">Disability Percentage</label>
                                             <input type="text" id="form1" name="per" class="col-2 form-control " max="100"
-                                                   accuracy="2" style="width:25%" placeholder="Enter Disability Percentage">
+                                                   accuracy="2" style="width:35%" placeholder="Enter Disability Percentage">
                                         </div>
                                         <div class="address mt-1">
                                             <label class="form-label fw-semibold" for="add1" area-label="mugavari">Current Address</label>
@@ -146,7 +146,7 @@
                                         <label class="form-label fw-semibold" for="aadhar" area-label="aadhar aen">Aadhar Card Number</label>
                                         <div class="input-group">
                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7I5HDnmXP86FUWMDu8o5qPhGbvF6CYAFiA&usqp=CAU" class="input-group-text" width="58px"  alt=""> 
-                                            <input type="text" class="form-control" name="aadharnumber" id="aadhar" placeholder="Enter AadharCard Number">
+                                            <input type="text" class="form-control" name="aadharnumber" id="aadhar" placeholder="Enter 12 Digit Aadharcard Number">
                                         </div>
                                         
                                     </div>
@@ -154,7 +154,7 @@
                                         <label class="form-label fw-semibold" for="udid/sdid" area-label="udid/sdid aen">UDID/SDID Number</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/684/684833.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="text" class="form-control" name="udid" id="udid/sdid" placeholder="Enter UD ID/SD ID Number">
+                                            <input type="text" class="form-control" name="udid" id="udid/sdid" placeholder="Enter UDID/SDID Number">
                                         </div>
                                        
                                     </div>
@@ -169,18 +169,18 @@
                                     <label class="form-label mt-2 fw-semibold" area-label="kuraipaadu vagai">Type Of Request</label><br>
                                         <div class="btn-group mt-2" name="requesttype">
                                             <input type="radio" class="btn-check" name="requesttype" id="type1"
-                                                 value="Goods" area-label="siruvaiyathil irunthu">
+                                                 value="Goods" area-label="siruvaiyathil irunthu" onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type1" >Goods</label>
 
                                             <input type="radio" class="btn-check" name="requesttype"  id="type2"
-                                                value="Services" area-label="pathin paruvam">
+                                                value="Services" area-label="pathin paruvam" onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type2" >Services</label>
 
                                             <input type="radio" class="btn-check" name="requesttype" id="type3"
-                                                value="Guidance"  area-label="samibathil">
+                                                value="Guidance"  area-label="samibathil" onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type3"> Guidance</label>
                                             <input type="radio" class="btn-check" name="requesttype" id="type4"
-                                                value="All" area-label="samibathil">
+                                                value="All" area-label="samibathil" onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type4" >All</label>
                                         </div><br>
                                     <label class="form-label mt-2 fw-semibold" area-label="ungal thozhil">Select Your Profession</label>
@@ -188,21 +188,22 @@
                                         <select class="form-select" aria-label="thozhil" name="profession">
                                             <option selected>Select your profession</option>
                                             <optgroup label="employed">
-                                                <option value="Employed-Government" name="profession" area-label="government">Government</option>
+                                                <option value="Employed-Government" name="profession" area-label="government" onclick="choosepro()">Government</option>
                                             <optgroup label="Private">
-                                                <option value="Private-small scale industry" name="profession" area-label="siru thozhil">Small Scale Industry</option>
-                                                <option value="Private-Medium Scale Industry" name="profession" area-label="naduthara thozhil">Medium Scale Industry</option>
-                                                <option value="Private-Large Scale Industry" name="profession" area-label="peru niruvanam">Large Scale Industry</option>
+                                                <option value="Private-small scale industry" name="profession" area-label="siru thozhil" onclick="choosepro()">Small Scale Industry</option>
+                                                <option value="Private-Medium Scale Industry" name="profession" area-label="naduthara thozhil" onclick="choosepro()">Medium Scale Industry</option>
+                                                <option value="Private-Large Scale Industry" name="profession" area-label="peru niruvanam" onclick="choosepro()">Large Scale Industry</option>
                                             </optgroup>
                                             </optgroup>
-                                            <option value="selfemployed" name="profession" id="profession" area-label="suyathozhil">Selfemployed</option>
-                                            <option value="Unemployed" name="profession" id="profession" area-label="velai thedubavar">Unemployed</option>
+                                            <option value="selfemployed" name="profession" id="profession" area-label="suyathozhil" onclick="choosepro()">Selfemployed</option>
+                                            <option value="Unemployed" name="profession" id="profession" area-label="velai thedubavar" onclick="choosepro()">Unemployed</option>
                                         </select>
                                     </div>
 
                                     <div class="discer mt-2">
                                         <label class="form-label fw-semibold" for="certificate">Disability Certificate</label><br>
-                                        <input type="file" id="certificate" name="imgsrc" accept="image/*">
+                                        <input type="file" id="certificate" name="imgsrc" accept="image/*" aria-labelledby="cer">
+                                        <span id="cer" aria-hidden="true" class="d-none">Please click on Browse To Upload disability certificate</span>
                                     </div>
                                     <div class="mt-2">
                                         <label class="form-label fw-semibold" for="pincode" area-label="anjal kuriyidu" >Pincode</label>
