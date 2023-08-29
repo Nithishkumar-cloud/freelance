@@ -2,9 +2,9 @@ const express=require('express');
 const {registeruser,loginuser, registeruserhelper, loginhelper,LogOutuser,changepin,sessionids, sessionidhelper, phoneupdate, percentageupdate,PinUpdate,dobupdate,Addressupdate,pinhelper,dobhelper,phonehelper,addresshelper,genhelper, read,Profession,PerAddressupdate,whatphoneupdate}=require('../controllers/authcontrollers');
 const router=express.Router();
 const path=require('path');
-const upload=require('../middleware/upload');
-
-router.route('/register').post(upload.single(`data[p]`),registeruser);
+//const upload=require('../middleware/upload');
+//upload.single(`data[p]`)
+router.route('/register').post(registeruser);
 
 router.route('/login').post(loginuser);
 
