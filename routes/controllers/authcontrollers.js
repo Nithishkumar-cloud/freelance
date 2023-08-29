@@ -20,8 +20,8 @@ exports.registeruser=async(req,res,next)=>{
 const Name = req.body.data.a;
   const Phone = req.body.data.b;
   const Whatsapp=req.body.data.q;
-  const Image=`${process.env.BACKEND_URL}/uploads/${req.file.originalname}`;
-     console.log(Image);
+  // const Image=`${process.env.BACKEND_URL}/uploads/${req.file.originalname}`;
+  //    console.log(Image);
 //  console.log(Whatsapp);
   const Address = req.body.data.g;
   var Aadharcardnumber = req.body.data.d;
