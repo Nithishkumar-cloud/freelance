@@ -39,7 +39,7 @@
            
            console.log(user.p);
             
-            let q=await axios.post("http://localhost:21021/register",{data:user},{headers:{"Content-Type": "multipart/form-data"}});
+            let q=await axios.post("/register",{data:user},{headers:{"Content-Type": "multipart/form-data"}});
             console.log(q.data);
             localStorage.setItem('sessionid',q.data.ids.sessionId);
             location.assign("/homepage");
@@ -58,7 +58,7 @@
                 errordisplay("please Enter your Pin") ;
             }
             else{
-                     var c=await axios.post("http://localhost:21021/login",{data:details});
+                     var c=await axios.post("/login",{data:details});
                 // console.log(c.data.ids.sessionId);
                 //console.log(c.data.msg);
                 console.log(c.data.msg);
