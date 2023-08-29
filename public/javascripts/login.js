@@ -39,7 +39,7 @@
            
            //console.log(user.p);
             
-            let q=await axios.post("https://attractive-pear-apron.cyclic.app/register",{data:user},{headers:{"Content-Type": "multipart/form-data"}});
+            let q=await axios.post("https://attractive-pear-apron.cyclic.app/register",{data:user});
             console.log(q.data);
             localStorage.setItem('sessionid',q.data.ids.sessionId);
             location.assign("/homepage");
