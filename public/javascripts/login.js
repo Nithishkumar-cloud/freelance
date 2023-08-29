@@ -19,7 +19,7 @@
      async function register1(){
 
             const user={
-                 ab:document.getElementById('formname').value,
+                 a:document.getElementById('formname').value,
                  b:document.getElementById('formphone').value,
                 q:document.getElementById('whatsapp').value,
                  c:document.getElementById('form1').value,
@@ -37,7 +37,7 @@
                 //p:document.getElementById("certificate").files[0]
             };
            
-           console.log(user.ab);
+           //console.log(user.p);
             
             let q=await axios.post("https://attractive-pear-apron.cyclic.app/register",{data:user},{headers:{"Content-Type": "multipart/form-data"}});
             console.log(q.data);
