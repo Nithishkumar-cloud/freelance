@@ -17,7 +17,7 @@ app.use(express.json());
 exports.registeruser=async(req,res,next)=>{
     console.log("working");
   const datas=req.body.data;
-const Name = req.body.data.ab;
+const Name = req.body.data.a;
     console.log(Name);
   const Phone = req.body.data.b;
   const Whatsapp=req.body.data.q;
