@@ -26,8 +26,8 @@ const Name = req.body.data.a;
 //  console.log(Whatsapp);
   const Address = req.body.data.g;
   var Aadharcardnumber = req.body.data.d;
-  const DisabilityType=req.body.data.h;
-  const Gender = req.body.data.j;
+  const DisabilityType=req.body.data.dt;
+  const Gender = req.body.data.gnd;
   var sdidudidnumber = req.body.data.e;
   var Pin=req.body.data.l;
   const Dateofbirth = req.body.data.f;
@@ -35,9 +35,9 @@ const Name = req.body.data.a;
   console.log(PermanentAdd);
   // const img = req.body.img;
  const  Disabilityper=req.body.data.c;
- const Profession=req.body.data.k;
+ const Profession=req.body.data.pr;
  const Pincode=req.body.data.pincode;
- const RequestType=req.body.data.rqtype;
+ const RequestType=req.body.data.rq;
  Aadharcardnumber=await bcrypt.hash(Aadharcardnumber,10);
  sdidudidnumber=await bcrypt.hash(sdidudidnumber,10);
   // if (!(Name && Phone && Address && Aadharcardnumber && sdidudidnumber && Gender &&  DisabilityType && Dateofbirth && Disabilityper && Profession&& Pin&&Pincode &&RequestType&&PermanentAdd &&Whatsapp&&Image)) {
@@ -73,7 +73,7 @@ const Name = req.body.data.a;
        Phone
   });
 console.log(user);
-res.json({user,ids});
+res.json({user,ids,regmsg:"Registered successfully"});
 
 };
 
@@ -132,7 +132,7 @@ res.json({user,ids});
   
    else{
       //return next(new errorhandler('Invalid email or password',400));
-      res.json({msg:"Incorrect PhoneNumber or Pin"});
+      res.json({msg:"Incorrect Phonenumber or Pin"});
    }
 
   };
@@ -242,7 +242,7 @@ if(userlog){
 
 else{
    //return next(new errorhandler('Invalid email or password',400));
-   res.json({message:"Invalid PhoneNumber or Pin"});
+   res.json({message:"Incorrect Phonenumber or Pin"});
 }
 
 
