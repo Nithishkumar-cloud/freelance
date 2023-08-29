@@ -1,6 +1,6 @@
 const sessionid = localStorage.getItem('sessionid');
 
-        var x = axios.post("http://localhost:21021/ids", { id: sessionid });
+        var x = axios.post("/ids", { id: sessionid });
         
 
         x.then(function (result) {
@@ -17,7 +17,7 @@ const sessionid = localStorage.getItem('sessionid');
         
 
         async function logout() {
-            var c = axios.post("http://localhost:21021/logout", { id: sessionid });
+            var c = axios.post("/logout", { id: sessionid });
             
             c.then(function(result){
                 console.log(result.data.logoutmsg);
@@ -52,7 +52,7 @@ const sessionid = localStorage.getItem('sessionid');
                  
               }
               else{
-                  var c=await axios.post("http://localhost:21021/phoneupdate", { data: details });
+                  var c=await axios.post("/phoneupdate", { data: details });
                   console.log(c.data.user.Phone);
                   console.log(c.data.phonemsg);
                 
@@ -85,7 +85,7 @@ const sessionid = localStorage.getItem('sessionid');
                  },3000);
               }
               else{
-                   var d=await axios.post("http://localhost:21021/WhatsappPhoneUpdate", { data: details });
+                   var d=await axios.post("/WhatsappPhoneUpdate", { data: details });
                    
                   
                 document.getElementById('whaterrmsg').innerHTML=d.data.whatmsg;
@@ -115,7 +115,7 @@ const sessionid = localStorage.getItem('sessionid');
                  },3000);
               }
               else{
-                   var c=await axios.post("http://localhost:21021/dobupdate", { data: details });
+                   var c=await axios.post("/dobupdate", { data: details });
              console.log(c.data.dobmsg);
                 document.getElementById('doberrmsg').innerHTML=c.data.dobmsg;
                 let speech = new SpeechSynthesisUtterance(c.data.dobmsg);
@@ -145,7 +145,7 @@ const sessionid = localStorage.getItem('sessionid');
                  },3000);
               }
               else{
-                   var c=await axios.post("http://localhost:21021/addressupdate", { data: details });
+                   var c=await axios.post("/addressupdate", { data: details });
              
                  document.getElementById('adderrmsg').innerHTML=c.data.cuaddmsg;
                 let speech = new SpeechSynthesisUtterance(c.data.cuaddmsg);
@@ -176,7 +176,7 @@ const sessionid = localStorage.getItem('sessionid');
                  },3000);
               }
               else{
-                  var c=await axios.post("http://localhost:21021/PermanentAddressChange", { data: details });
+                  var c=await axios.post("/PermanentAddressChange", { data: details });
              document.getElementById('peradderrmsg').innerHTML=c.data.permanentaddmsg;
                 let speech = new SpeechSynthesisUtterance(c.data.permanentaddmsg);
                 //  speech.lang = 'ta-IN';
@@ -205,7 +205,7 @@ const sessionid = localStorage.getItem('sessionid');
                  },3000);
               }
               else{
-                   var c=await axios.post("http://localhost:21021/disperupdate", { data: details });
+                   var c=await axios.post("/disperupdate", { data: details });
              document.getElementById('diserrmsg').innerHTML=c.data.percentagemsg;
                  let speech = new SpeechSynthesisUtterance(c.data.percentagemsg);
                 //  speech.lang = 'ta-IN';
@@ -236,7 +236,7 @@ const sessionid = localStorage.getItem('sessionid');
                  },3000);
               }
               else{
-                  var c=await axios.post("http://localhost:21021/profession",{data:details});
+                  var c=await axios.post("/profession",{data:details});
            
               document.getElementById('proerrmsg').innerHTML=c.data.professionmsg;
                  let speech = new SpeechSynthesisUtterance(c.data.professionmsg);
@@ -275,7 +275,7 @@ const sessionid = localStorage.getItem('sessionid');
                  },3000);
             }
             else{
-               let x=await axios.post("http://localhost:21021/pinupdate", { data: details });
+               let x=await axios.post("/pinupdate", { data: details });
                console.log(x.data.pinmsg);
              document.getElementById('pinerrmsg').innerHTML=x.data.pinmsg;
                  let speech = new SpeechSynthesisUtterance(x.data.pinmsg);
