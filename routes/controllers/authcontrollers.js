@@ -60,7 +60,6 @@ const Name = req.body.data.a;
     Profession,
     Pincode,
     RequestType,
-    Image,
     Pin
   });
   const objectid=user.id;
