@@ -2,7 +2,7 @@
         console.log(sessionidhelper);
        
         
-         var x=axios.post("https://worried-gold-shoulder-pads.cyclic.app/idshelp",{id:sessionidhelper});
+         var x=axios.post("https://attractive-pear-apron.cyclic.app/idshelp",{id:sessionidhelper});
             
             x.then(function(result) {
                 
@@ -14,7 +14,7 @@
              });
     
              async function logout() {
-                var c=axios.post("http://localhost:21021/logout",{id:sessionidhelper});
+                var c=axios.post("https://attractive-pear-apron.cyclic.app/logout",{id:sessionidhelper});
                 localStorage.removeItem("sessionidhelper");
                document.cookie = "tokenhelper=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
                 location.assign("/");
@@ -27,7 +27,7 @@
                 if(details.Phone===""){
                     return document.getElementById('phoneerr').innerHTML="Please enter your Phone Number";
                   }
-                 var c=axios.post("https://worried-gold-shoulder-pads.cyclic.app/phone", { data: details });
+                 var c=axios.post("https://attractive-pear-apron.cyclic.app/phone", { data: details });
                  c.then(function(result) {
                     console.log(result);
                     const f = document.getElementById('phone').innerHTML = result.data.user.Phone;
@@ -41,7 +41,7 @@
                 if(details.gender===""){
                     return document.getElementById('generr').innerHTML="Please enter your Gender";
                   }
-                 var c=axios.post("https://worried-gold-shoulder-pads.cyclic.app/gender", { data: details });
+                 var c=axios.post("https://attractive-pear-apron.cyclic.app/gender", { data: details });
                  c.then(function(result) {
              
                     const f = document.getElementById('gen').innerHTML = result.data.user.Gender;
@@ -55,7 +55,7 @@
                 if(details.dob===""){
                     return document.getElementById('doberr').innerHTML="Please enter your DateofBirth";
                   }
-                 var c=axios.post("https://worried-gold-shoulder-pads.cyclic.app/dob", { data: details });
+                 var c=axios.post("https://attractive-pear-apron.cyclic.app/dob", { data: details });
                  c.then(function(result) {
              
                     const f = document.getElementById('dob').innerHTML = result.data.user.Dateofbirth;
@@ -69,7 +69,7 @@
                 if(details.address===""){
                     return document.getElementById('adderr').innerHTML="Please enter your Address";
                   }
-                 var c=axios.post("https://worried-gold-shoulder-pads.cyclic.app/address", { data: details });
+                 var c=axios.post("https://attractive-pear-apron.cyclic.app/address", { data: details });
                  c.then(function(result) {
              
                     const f = document.getElementById('add').innerHTML = result.data.user.Address;
@@ -84,7 +84,7 @@
                 if(details.oldpass==="" ||details.newpass===""){
                     return document.getElementById('pinerr').innerHTML="Please enter your oldpass and newpass";
                   }
-                 let x=axios.post("https://worried-gold-shoulder-pads.cyclic.app/pinupdatehelper", { data: details });
+                 let x=axios.post("https://attractive-pear-apron.cyclic.app/pinupdatehelper", { data: details });
                  console.log(x.data.msg);
             }
        
