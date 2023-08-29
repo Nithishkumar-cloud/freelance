@@ -6,7 +6,7 @@
            location.assign('/profile');
         };
             async function Logout() {
-                var c = axios.post("http://localhost:21021/logout", { id:sessionid});
+                var c = axios.post("/logout", { id:sessionid});
                localStorage.clear();
                document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
                 location.assign("/");
