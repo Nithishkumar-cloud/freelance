@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/profilehelper.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+ 
+   
+</head>
+
+<body>
+     <section class="bg-light">
+        <ul class="nav nav-pills justify-content-end p-3 ">
+           
+            <li class="nav-item px-3" >
+                <button class="nav-link active" type="button" data-bs-toggle="pill" area-label="suya vivaram ariya">Profile</button>
+            </li>
+            <li class="nav-item px-3" >
+                <button class="nav-link " type="button" data-bs-toggle="pill" area-label="shamaangal">Cart</button>
+            </li>
+            <li class="nav-item px-3" >
+                <button class="nav-link " type="button" data-bs-toggle="pill" area-label="veliyera" onclick="logout()">Logout</button>
+            </li>
+            
+        </ul>
+
+    </section>
+    <section class="bg2 vh-100 d-flex justify-content-center">
+        <div class="container">
+            <div class="row  d-flex justify-content-center mt-3">
+                <div class="col-lg-4 col-sm-2">
+                    <div class="card sha">
+                        <div class="card-body text-center bg-black  text-white ">
+                            <img src="https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_1280.jpg"
+                                alt="profile" class="rounded rounded-circle border border-white"
+                                style="width:150px;height:150px" />
+                            <h4 id="user" area-label=""></h4>
+                            <a href="" class="btn btn-primary" area-label="suya vivaram maatra">Edit My Profile<i
+                                    class="bi bi-pencil-square  mx-2"></i></a>
+                        </div>
+                        <div class="card ">
+                            <div class="card-body">
+                                <h5 class="text-black fw-bold" area-label="suya vivaram">Information</h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="text-black" area-label="kaipesu aen">Phone</h6>
+                                        <div class="col d-flex">
+                                        <p class='text-muted' id="phone"></p>
+                                        <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal1" area-label="thirutham" role="button"></i>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Change Phone Number</h1>
+                                                            
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="number" class="rounded rounded-pill p-1" id="phoneinput">
+                                                            
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal" area-label="rathu sei">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                                                onclick="phoneupdate()">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col">
+                                        <h6 class="text-black" area0label="pirantha thedhi">Date Of Birth</h6>
+                                        <div class="col d-flex">
+                                       
+                                        <p class='text-muted' id="dob"></p>
+                                        <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal3" area-label="thirutham" role="button"></i>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal3">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Change DOB</h1>
+                                                    
+                                                    <button type="button" class="btn-close"
+                                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <input type="text" class="rounded rounded-pill p-1" id="dobinput">
+                                                    
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal" area-label="Rathu sei">Cancel</button>
+                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                                        onclick="dobupdate()" area-label="">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+     
+                                    </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="text-black" area-label="mugavari matram">Address</h6>
+                                        <div class="col d-flex">
+                                        <p class='text-muted' id="add"></p>
+                                        <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal2" area-label="thirutham" role="button"></i>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal2">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Change Address</h1>
+                                                            
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="text" class="rounded rounded-pill p-1" id="addressinput">
+                                                            
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                                                onclick="addupdate()">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="text-black" area-label="paalinam ">Gender</h6>
+                                            <div class="col d-flex">
+                                            <p class='text-muted' id="gen"></p>
+                                            <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal5" area-label="thirutham" role="button"></i>
+    
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal5" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Change Gender</h1>
+                                                        
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="btn-group mt-2" role="group"
+                                        aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="gender" value="male" id="btnradio1"
+                                            autocomplete="off"  required>
+                                        <label class="btn btn-outline-primary" for="btnradio1" area-label="aan">Male</label>
+
+                                        <input type="radio" class="btn-check" name="gender"  value=female id="btnradio2"
+                                            autocomplete="off" required >
+                                        <label class="btn btn-outline-primary" for="btnradio2" area-label="pen">Female</label>
+
+                                        <input type="radio" class="btn-check" name="gender" id="btnradio3"
+                                            autocomplete="off"  value="trans" required>
+                                        <label class="btn btn-outline-primary" for="btnradio3" area-label="maatru paalinam">Trans</label>
+                                      
+                                    </div>
+                                                        
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                                            onclick="genderupdate()">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>  
+                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="text-black " area-label="kadavu sollai thirutha">Change PIN</h6>
+                                        <div class="col d-flex">
+                                        <p class='text-muted'> * * * *</p>
+                                        <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal4" area-label="thirutham" role="button"></i>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal4">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Change PIN</h1>
+                                                    
+                                                    <button type="button" class="btn-close"
+                                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <input type="password" class="rounded rounded-pill p-1" id="oldpass">
+                                                    <input type="password" class="rounded rounded-pill p-1"
+                                                        id="newpass">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                                        onclick="pinchange()">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <script src="../javascripts/profilehelper.js"></script>
+    </body>
+    </html>

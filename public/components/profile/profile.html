@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../stylesheets/profile.css">
+
+</head>
+
+<body>
+   <section class="bg-light">
+        <ul class="nav nav-pills justify-content-end p-3 ">
+           
+            <li class="nav-item px-3" role="presentation">
+                <button class="nav-link active" type="button" data-bs-toggle="pill"
+                    area-label="suya vivaram ariya">Profile</button>
+            </li>
+            <li class="nav-item px-3" role="presentation">
+                <button class="nav-link " type="button" data-bs-toggle="pill" area-label="shamaangal">Cart</button>
+            </li>
+            <li class="nav-item px-3" role="presentation">
+                <button class="nav-link " type="button" data-bs-toggle="pill" area-label="veliyera"
+                    onclick="logout()">Logout</button>
+            </li>
+            
+        </ul>
+
+    </section>
+    <section class="bg2 vh-100 d-flex justify-content-center">
+        <div class="container">
+            <div class="row  d-flex justify-content-center mt-3">
+                <div class="col-lg-4 col-sm-2">
+                    <div class="card sha">
+                        <div class="card-body text-center bg-secondary  text-white ">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5987/5987420.png"
+                                alt="profile" class="rounded rounded-circle border border-white"
+                                style="width:160px;height:160px" />
+                            <h4 id="user"></h4>
+                            <a href="" class="btn btn-primary" area-hidden="true">Edit My Profile<i
+                                    class="bi bi-pencil-square  mx-2"></i></a>
+                        </div>
+                        <div class="card ">
+                            <div class="card-body">
+                                <h5 class="text-black fw-bold" area-label="suya vivaram">Information</h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="text-black" area-label="kaipesi aen">Phone</h6>
+                                        <div class="col d-flex phone">
+                                            <p class='text-muted' id="phone"></p>
+                                            <!-- Button trigger modal -->
+
+                                            <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal" aria-labelledby="phones" role="button"></i>
+                                            <span id="phones" class="d-none">Click on this button to edit phone number</span>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Phone Number
+                                                            </h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="number" class="rounded rounded-pill p-1"
+                                                                id="phoneinput">
+                                                                <p id="phoneerr" class="fw-bold text-danger"></p>
+                                                                <p id="phoneerrmsg" class="fw-bold text-success"></p>
+                                                                
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" 
+                                                                onclick="phone()">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="text-black" area-label="kaipesi aen">Whatsapp</h6>
+                                        <div class="col d-flex phone">
+                                            <p class='text-muted' id="whatphone"></p>
+                                            <!-- Button trigger modal -->
+
+                                            <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                                data-bs-target="#whatsappmodal" aria-label="Click on this button to edit Whatsapp number" role="button"></i>
+                                            <span id="whatphone" class="d-none" aria-hidden="true">Click on this button to edit Whatsapp number</span>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="whatsappmodal" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Whatsapp Number
+                                                            </h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="number" class="rounded rounded-pill p-1"
+                                                                id="whatphoneinput">
+                                                                <p id="whaterr" class="fw-bold text-danger"></p>
+                                                                <p id="whaterrmsg" class="fw-bold text-success" ></p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary"
+                                                                onclick="whatphone()">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="text-black" area-label="mugavari">Current Address</h6>
+                                        <div class="col d-flex">
+                                            <p class='text-muted' id="add"></p>
+                                            <i class="bi bi-pencil-fill text-danger" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal2" aria-labelledby="addressread" role="button"></i>
+                                           <span id="addressread" class="d-none" aria-hidden="true">Click on this button to edit Current Address</span>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal2" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Current Address</h1>
+                                                        
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <input type="text" class="rounded rounded-pill p-1"
+                                                            id="address">
+                                                            <p id="adderr" class="fw-semibold text-danger"></p>
+                                                             <p id="adderrmsg" class="fw-semibold text-success"></p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary" 
+                                                            onclick="address()">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                       
+                                    </div>
+                                     <div class="col">
+                                        <h6 class="text-black" area-label="mugavari">Permanent Address</h6>
+                                        <div class="col d-flex">
+                                            <p class='text-muted' id="peradd"></p>
+                                            <i class="bi bi-pencil-fill text-danger" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal9" aria-labelledby="peraddre" role="button"></i>
+                                           <span id="peraddre" class="d-none" aria-hidden="true">Click on this button to edit Permanent Address</span>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal9" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Permanent Address</h1>
+                                                        
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <input type="text" class="rounded rounded-pill p-1"
+                                                            id="peraddress">
+                                                            <p id="peradderr" class="fw-semibold text-danger"></p>
+                                                            <p id="peradderrmsg" class="fw-semibold text-success"></p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary" 
+                                                            onclick="peraddress()">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                       
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="text-black" area-label="kuraipaadu sathavitham">Disability Percentage
+                                        </h6>
+                                        <div class="col d-flex">
+                                            <p class='text-muted' id="per"></p>
+                                            <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal3" aria-labelledby="per" role="button"></i>
+                                             <span id="per" class="d-none" aria-hidden="true">Click on this button to edit Disability Percentage</span>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal3">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Disability Percentage</h1>
+                                                        
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <input type="number" class="rounded rounded-pill p-1"
+                                                            id="perinput">
+                                                            <p id="diserr" class="fw-semibold text-danger"></p>
+                                                            <p id="diserrmsg" class="fw-semibold text-success"></p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary" 
+                                                            onclick="percentage()">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="text-black" area-label="pirantha thedhi">Date Of Birth</h6>
+                                        <div class="col d-flex">
+                                            <p class='text-muted' id="dob"></p>
+                                            <!-- role=button is for (is equal to) cursor pointer -->
+                                            <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal1" aria-labelledby="dob" role="button"></i>
+                                            <span id="dob" class="d-none" aria-hidden="true">Click on this button to edit Date Of Birth</span>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel" area-label="">Date Of Birth</h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="text" class="rounded rounded-pill p-1"
+                                                            id="dobinput">
+                                                            <p id="doberr" class="fw-semibold text-danger"></p>
+                                                            <p id="doberrmsg" class="fw-semibold text-success"></p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" 
+                                                                onclick="dob()">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                        <div class="col">
+                                        <h6 class="text-black" area-label="thozhil">Profession</h6>
+                                        <div class="col d-flex">
+                                            <p class='text-muted' id="pro"></p>
+                                            <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal7" aria-labelledby="proed" role="button"></i>
+                                            <span id="proed" class="d-none" aria-hidden="true">Click on this button to edit profession</span>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal7">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Profession</h1>
+                                                        
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <label class="mt-2 fw-semibold" area-label="ungal thozhil">Select Your Profession</label>
+                                           <div class="profession">
+                                               <select class="form-select" aria-label="thozhil" name="profession" required>
+                                            <option selected>Select your profession</option>
+                                            <optgroup label="employed">
+                                                <option value="Employed-Government" name="profession" area-label="government">Government</option>
+                                            <optgroup label="Private">
+                                                <option value="Private-small scale industry" name="profession"  area-label="siru thozhil">Small Scale Industry</option>
+                                                <option value="Private-Medium Scale Industry" name="profession"  area-label="naduthara thozhil">Medium Scale Industry</option>
+                                                <option value="Private-Large Scale Industry" name="profession"  area-label="peru niruvanam">Large Scale Industry</option>
+                                            </optgroup>
+                                            </optgroup>
+                                            <option value="selfemployed" name="profession"  area-label="suyathozhil">Selfemployed</option>
+                                            <option value="Unemployed" name="profession" area-label="velai thedubavar">Unemployed</option>
+                                             </select>
+                                                </div>
+                                                     
+                                                    </div>
+                                                    <p id="proerr" class="fw-semibold text-danger"></p>
+                                                    <p id="proerrmsg" class="fw-semibold text-success"></p>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-primary" 
+                                                            onclick="profession()">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="text-black " area-label="kadavu sollai thirutha">Change PIN</h6>
+                                        <div class="col d-flex">
+                                            <p class='text-muted'> * * * *</p>
+                                            <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal4" aria-labelledby="pi" role="button"></i>
+                                            <span id="pi" class="d-none" aria-hidden="true">If you forget the pin Click on this button to change login PIN</span>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal4">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Change PIN</h1>
+                                                            
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="password" class="rounded rounded-pill p-1" id="oldpass">
+                                                            <input type="password" class="rounded rounded-pill p-1"
+                                                                id="newpass">
+                                                                <p id="pinerr" class="fw-semibold text-danger"></p>
+                                                                <p id="pinerrmsg" class="fw-semibold text-success"></p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary"
+                                                                onclick="pinchange()">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="../javascripts/profile.js"></script>
+</body>
+
+</html>
