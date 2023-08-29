@@ -72,42 +72,42 @@ function choosechi(){
                  pincode:document.getElementById('pincode').value,
                 //p:document.getElementById("certificate").files[0]
             };
-            if (user.a === "") {
-                   errordisplayreg("Please Enter Your Name");
-           } 
-          else if (gnd === "") {
-             errordisplayreg("Please Enter Your Gender");
-         }
-        else if (rq === "") {
-           errordisplayreg("Please Enter Your Request Type");
-       } 
-      else if (pr === "") {
-          errordisplayreg("Please Enter Your Profession");
-       } 
-       else if (dt === "") {
-           errordisplayreg("Please Enter Your Disability Type");
-       }
-       else if(user.l===""){
-           errordisplayreg("Please Enter Your Password");
-       }
-       else if(user.pincode===""){
-           errordisplayreg("Please Enter Your Pincode");
-       }
-       else if(user.p===""){
-           errordisplayreg("Please Upload Your Certificate");
-       }
-       else if(user.m===""){
-           errordisplayreg("Please Enter Your Permanent Address");
-        }
-        else if(user.g===""){
-            errordisplayreg("Please Enter Your Current Address");
-       }
-       else if(user.f===""){
-           errordisplayreg("Please Enter Your DateOfBirth");
-      }
-      else if(user.e===""){
-          errordisplayreg("Please Enter Your Aadharcard Number");
-      }
+    if (user.a === "") {
+        errordisplayreg("Please Enter Your Name");
+    } 
+    else if (gnd === "") {
+        errordisplayreg("Please Enter Your Gender");
+    }
+    else if (rq === "") {
+        errordisplayreg("Please Enter Your Request Type");
+    } 
+    else if (pr === "") {
+        errordisplayreg("Please Enter Your Profession");
+    } 
+    else if (dt === "") {
+        errordisplayreg("Please Enter Your Disability Type");
+    }
+    else if(user.l===""){
+        errordisplayreg("Please Enter Your Password");
+    }
+    else if(user.pincode===""){
+        errordisplayreg("Please Enter Your Pincode");
+    }
+     else if(user.p===""){
+        errordisplayreg("Please Upload Your Certificate");
+    }
+     else if(user.m===""){
+        errordisplayreg("Please Enter Your Permanent Address");
+    }
+     else if(user.g===""){
+        errordisplayreg("Please Enter Your Current Address");
+    }
+     else if(user.f===""){
+        errordisplayreg("Please Enter Your DateOfBirth");
+    }
+     else if(user.e===""){
+        errordisplayreg("Please Enter Your Aadharcard Number");
+    }
      else if(user.d===""){
         errordisplayreg("Please Enter Your UDID or SDID Number");
     }
@@ -195,19 +195,17 @@ function choosechi(){
                  },6000);      
               
           }
-function errordisplayreg(value) {
-    document.getElementById('errreg').style.display = "block";
-    document.getElementById('errreg').innerHTML = value;
+        function errordisplayreg(value) {
+             document.getElementById('errreg').style.display = "block";
+              document.getElementById('errreg').innerHTML = value;
 
-    let speech = new SpeechSynthesisUtterance(value);
-    //  speech.lang = 'ta-IN';
-    speechSynthesis.speak(speech);
-//                let speech1 = new SpeechSynthesisUtterance("thayavuseithu ungal ennai ullidavum");
-//                //  speech.lang = 'ta-IN';
-//                 speechSynthesis.speak(speech1);
-    console.log("work");
-    const timeout = setTimeout(() => {
-        document.getElementById("errreg").style.display = "none";
-    }, 6000);
+              let speech = new SpeechSynthesisUtterance(value);
+   
+               speechSynthesis.speak(speech);
 
-}
+               console.log("work");
+              const timeout = setTimeout(() => {
+                       document.getElementById("errreg").style.display = "none";
+               }, 6000);
+
+           }
