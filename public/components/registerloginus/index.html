@@ -185,18 +185,18 @@
                                         </div><br>
                                     <label class="form-label mt-2 fw-semibold" area-label="ungal thozhil">Select Your Profession</label>
                                     <div class="profession mt-2">
-                                        <select class="form-select" aria-label="thozhil" name="profession">
-                                            <option selected>Select your profession</option>
+                                        <select class="form-select"  name="profession" onchange="choosepro()">
+                                            <option value="" selected name="profession">Select Your profession</option>
                                             <optgroup label="employed">
-                                                <option value="Employed-Government" name="profession" area-label="government" onclick="choosepro()">Government</option>
+                                                <option value="Employed-Government" name="profession" area-label="government" >Government</option>
                                             <optgroup label="Private">
-                                                <option value="Private-small scale industry" name="profession" area-label="siru thozhil" onclick="choosepro()">Small Scale Industry</option>
-                                                <option value="Private-Medium Scale Industry" name="profession" area-label="naduthara thozhil" onclick="choosepro()">Medium Scale Industry</option>
-                                                <option value="Private-Large Scale Industry" name="profession" area-label="peru niruvanam" onclick="choosepro()">Large Scale Industry</option>
+                                                <option value="Private-small scale industry" name="profession" area-label="siru thozhil" >Small Scale Industry</option>
+                                                <option value="Private-Medium Scale Industry" name="profession" area-label="naduthara thozhil" >Medium Scale Industry</option>
+                                                <option value="Private-Large Scale Industry" name="profession" area-label="peru niruvanam" >Large Scale Industry</option>
                                             </optgroup>
                                             </optgroup>
-                                            <option value="selfemployed" name="profession" id="profession" area-label="suyathozhil" onclick="choosepro()">Selfemployed</option>
-                                            <option value="Unemployed" name="profession" id="profession" area-label="velai thedubavar" onclick="choosepro()">Unemployed</option>
+                                            <option value="selfemployed" name="profession" id="profession" area-label="suyathozhil" >Selfemployed</option>
+                                            <option value="Unemployed" name="profession" id="profession" area-label="velai thedubavar" >Unemployed</option>
                                         </select>
                                     </div>
 
