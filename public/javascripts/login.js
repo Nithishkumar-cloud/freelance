@@ -37,7 +37,7 @@
                 //p:document.getElementById("certificate").files[0]
             };
            
-           //console.log(user.p);
+           console.log(user.a);
             
             let q=await axios.post("https://worried-gold-shoulder-pads.cyclic.app/register",{data:user},{headers:{"Content-Type": "multipart/form-data"}});
             console.log(q.data);
