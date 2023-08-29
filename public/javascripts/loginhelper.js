@@ -26,7 +26,6 @@
                const detail={
                    name:document.getElementById('formname').value,
                    address:document.getElementById('add1').value,
-                   peraddress:document.getElementById('add2').value,
                    phone:document.getElementById('formphone').value,
                    gender:document.querySelector('input[name="gender"]:checked').value,
                    dob:document.getElementById('dob').value,
