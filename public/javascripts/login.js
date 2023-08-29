@@ -73,41 +73,41 @@ function choosechi(){
                 //p:document.getElementById("certificate").files[0]
             };
             if (user.a === "") {
-        errordisplayreg("Please Enter Your Name");
-    } 
-    else if (gnd === "") {
-        errordisplayreg("Please Enter Your Gender");
-    }
-    else if (rq === "") {
-        errordisplayreg("Please Enter Your Request Type");
-    } 
-    else if (pr === "") {
-        errordisplayreg("Please Enter Your Profession");
-    } 
-    else if (dt === "") {
-        errordisplayreg("Please Enter Your Disability Type");
-    }
-    else if(user.l===""){
-        errordisplayreg("Please Enter Your Password");
-    }
-    else if(user.pincode===""){
-        errordisplayreg("Please Enter Your Pincode");
-    }
-     else if(user.p===""){
-        errordisplayreg("Please Upload Your Certificate");
-    }
-     else if(user.m===""){
-        errordisplayreg("Please Enter Your Permanent Address");
-    }
-     else if(user.g===""){
-        errordisplayreg("Please Enter Your Current Address");
-    }
-     else if(user.f===""){
-        errordisplayreg("Please Enter Your DateOfBirth");
-    }
-     else if(user.e===""){
-        errordisplayreg("Please Enter Your Aadharcard Number");
-    }
+                   errordisplayreg("Please Enter Your Name");
+           } 
+          else if (gnd === "") {
+             errordisplayreg("Please Enter Your Gender");
+         }
+        else if (rq === "") {
+           errordisplayreg("Please Enter Your Request Type");
+       } 
+      else if (pr === "") {
+          errordisplayreg("Please Enter Your Profession");
+       } 
+       else if (dt === "") {
+           errordisplayreg("Please Enter Your Disability Type");
+       }
+       else if(user.l===""){
+           errordisplayreg("Please Enter Your Password");
+       }
+       else if(user.pincode===""){
+           errordisplayreg("Please Enter Your Pincode");
+       }
+       else if(user.p===""){
+           errordisplayreg("Please Upload Your Certificate");
+       }
+       else if(user.m===""){
+           errordisplayreg("Please Enter Your Permanent Address");
+        }
+        else if(user.g===""){
+            errordisplayreg("Please Enter Your Current Address");
+       }
+       else if(user.f===""){
+           errordisplayreg("Please Enter Your DateOfBirth");
+      }
+      else if(user.e===""){
+          errordisplayreg("Please Enter Your Aadharcard Number");
+      }
      else if(user.d===""){
         errordisplayreg("Please Enter Your UDID or SDID Number");
     }
@@ -119,9 +119,6 @@ function choosechi(){
     }
      else if(user.b===""){
         errordisplayreg("Please Enter Your Phonenumber");
-    }
-     else if(user.a===""){
-        errordisplayreg("Please Enter Your Name");
     }
      else{
         let q=await axios.post("https://attractive-pear-apron.cyclic.app/register",{data:user});
