@@ -32,7 +32,7 @@ app.use(express.json());
 app.set("views", path.join(__dirname, '../views'));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public/'));
-app.use('/uploads',express.static(path.join(__dirname,'./routes/uploads')));
+//app.use('/uploads',express.static(path.join(__dirname,'./routes/uploads')));
 
 //app.use((req, res, next) => {
 //  res.setHeader("Access-Control-Allow-Origin", "*");
