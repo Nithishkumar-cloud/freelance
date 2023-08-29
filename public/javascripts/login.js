@@ -34,7 +34,7 @@
                  j:document.querySelector('input[name="gender"]:checked').value,
                  l:document.getElementById('pass').value,
                  pincode:document.getElementById('pincode').value,
-                p:document.getElementById("certificate").files[0]
+                //p:document.getElementById("certificate").files[0]
             };
            
            console.log(user.p);
