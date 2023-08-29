@@ -34,10 +34,10 @@
                  j:document.querySelector('input[name="gender"]:checked').value,
                  l:document.getElementById('pass').value,
                  pincode:document.getElementById('pincode').value,
-                p:document.getElementById("certificate").files[0]
+                //p:document.getElementById("certificate").files[0]
             };
            
-           console.log(user.p);
+           //console.log(user.p);
             
             let q=await axios.post("https://worried-gold-shoulder-pads.cyclic.app/register",{data:user},{headers:{"Content-Type": "multipart/form-data"}});
             console.log(q.data);
