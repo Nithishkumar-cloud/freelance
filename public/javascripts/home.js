@@ -5,12 +5,25 @@
  
            location.assign('/profile');
         };
-            async function Logout() {
-                var c = axios.post("https://attractive-pear-apron.cyclic.app/logout", { id:sessionid});
-               localStorage.clear();
-               document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
-                location.assign("/");
-            }
+           async function logout() {
+            var c = axios.post("https://attractive-pear-apron.cyclic.app/logout", { id: sessionid });
+            
+            c.then(function(result){
+                console.log(result.data.logoutmsg);
+                let speech = new SpeechSynthesisUtterance(result.data.logoutmsg);
+                //  speech.lang = 'ta-IN';
+                 speechSynthesis.speak(speech);
+                 const timeout=setTimeout(()=>{
+                 location.assign("/");
+            },2000);
+            
+            });
+            localStorage.removeItem("sessionid");
+            document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            
+           
+           
+        }
         
         
          /*   function read(){
