@@ -37,7 +37,7 @@
                 //p:document.getElementById("certificate").files[0]
             };
            
-           //console.log(user.p);
+           console.log(user.a);
             
             let q=await axios.post("https://attractive-pear-apron.cyclic.app/register",{data:user});
             console.log(q.data);
