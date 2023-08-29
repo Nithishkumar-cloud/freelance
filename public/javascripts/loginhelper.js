@@ -41,7 +41,7 @@
                }
                
                
-               let a=await axios.post("http://localhost:21021/reghelper",{data:detail});
+               let a=await axios.post("/reghelper",{data:detail});
                console.log(a.data);
                localStorage.setItem('sessionidhelper',a.data.ids.sessionIdHelper);
                location.assign("/helperprofile");
@@ -60,7 +60,7 @@
             errordisplay("Please Enter Your PIN");
         }
            else{
-            var c=await axios.post("http://localhost:21021/loghelper",{data:details});
+            var c=await axios.post("/loghelper",{data:details});
             //console.log(c.data.userlog.Pin);
             if(c.data.message===""){
                 localStorage.setItem('sessionidhelper',c.data.ids.sessionIdHelper);
@@ -80,9 +80,9 @@
               document.getElementById('errhelp').style.display="block";
                document.getElementById('errhelp').innerHTML=value;
              
-                let speech = new SpeechSynthesisUtterance(value);
-                //  speech.lang = 'ta-IN';
-                 speechSynthesis.speak(speech);
+                // let speech = new SpeechSynthesisUtterance(value);
+                // //  speech.lang = 'ta-IN';
+                //  speechSynthesis.speak(speech);
 //                let speech1 = new SpeechSynthesisUtterance("thayavuseithu ungal ennai ullidavum");
 //                //  speech.lang = 'ta-IN';
 //                 speechSynthesis.speak(speech1);
