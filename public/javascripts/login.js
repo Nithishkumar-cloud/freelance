@@ -150,10 +150,10 @@ function choosechi(){
             };
           
             if(details.a===""){
-              errordisplay("Please Enter Your PhoneNumber");
+              errordisplay("Please Enter Your Phonenumber");
             }
             else if(details.b===""){
-                errordisplay("please Enter your Pin") ;
+                errordisplay("Please Enter Your Pin") ;
             }
             else{
                      var c=await axios.post("https://attractive-pear-apron.cyclic.app/login",{data:details});
