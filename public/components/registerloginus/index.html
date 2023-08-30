@@ -71,8 +71,8 @@
                                             </div>
                                             
                                         </div>
-                                        <label class="form-label mt-2 fw-semibold" aria-labelledby="gen">Gender</label><br>
-                                        <span class="d-none" aria-hidden="true" id="gen">Please select Anyone Gender from Radio Button</span>
+                                        <label class="form-label mt-2 fw-semibold">Gender</label><br>
+<!--                                         <span class="d-none" aria-hidden="true" id="gen">Please select Anyone Gender from Radio Button</span> -->
                                         <div class="btn-group mt-2" name="gender">
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype1"
                                                  value="Male"  aria-label="selected gender male" onclick="choosegen()">
@@ -96,7 +96,7 @@
                                            
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/126/126509.png" class="input-group-text" width="48px" alt="">
-                                                <input type="tel" id="formphone" class="form-control" name="phone"  placeholder="Enter Phone Number *"  max="10" aria-required="true">
+                                                <input type="tel" id="formphone" class="form-control" name="phone"  placeholder="Enter Phone Number *"  maxlength="10" aria-required="true"/>
                                                 
                                             </div>
                                            
@@ -107,7 +107,7 @@
                                            
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/152/152740.png" class="input-group-text" width="48px" alt="">
-                                                <input type="tel" id="whatsapp" class="form-control"  placeholder="Enter Whatsapp Number *"  max="10" aria-required="true" aria-hidden="true" aria-placeholder="Enter Whatsapp Number">
+                                                <input type="tel" id="whatsapp" class="form-control"  placeholder="Enter Whatsapp Number *"  max="10" aria-required="true"/>
                                                 
                                             </div>
                                            
@@ -129,7 +129,7 @@
                                         <div class="formper mt-2">
                                             <label class="form-label fw-semibold" for="form1" area-label="kuraipaadu sathavitham">Disability Percentage</label>
                                             <input type="text" id="form1" name="per" class="col-2 form-control " max="100"
-                                                   accuracy="2" style="width:45%" placeholder="Enter Disability Percentage aria-required="true">
+                                                   accuracy="2" style="width:45%" placeholder="Enter Disability Percentage *" aria-required="true"/>
                                         </div>
                                         <div class="address mt-1">
                                             <label class="form-label fw-semibold" for="add1" area-label="mugavari">Current Address</label>
@@ -147,7 +147,7 @@
                                         <label class="form-label fw-semibold" for="aadhar" area-label="aadhar aen">Aadhar Card Number</label>
                                         <div class="input-group">
                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7I5HDnmXP86FUWMDu8o5qPhGbvF6CYAFiA&usqp=CAU" class="input-group-text" width="58px"  alt=""> 
-                                            <input type="text" class="form-control" name="aadharnumber" id="aadhar" placeholder="Enter 12 Digit Aadharcard Number" aria-required="true">
+                                            <input type="text" class="form-control" name="aadharnumber" id="aadhar" placeholder="Enter 12 Digit Aadharcard Number *" aria-required="true" maxlength="12"/>
                                         </div>
                                         
                                     </div>
@@ -155,7 +155,7 @@
                                         <label class="form-label fw-semibold" for="udid/sdid" area-label="udid/sdid aen">UDID/SDID Number</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/684/684833.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="text" class="form-control" name="udid" id="udid/sdid" placeholder="Enter UDID/SDID Number" aria-required="true">
+                                            <input type="text" class="form-control" name="udid" id="udid/sdid" placeholder="Enter UDID/SDID Number *" aria-required="true"/>
                                         </div>
                                        
                                     </div>
@@ -163,7 +163,7 @@
                                         <label class="form-label fw-semibold" for="dob" area-label="pirantha thedhi">Date Of Birth</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/2195/2195392.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="date" class="form-control" name="dob" id="dob" placeholder="Enter DateOfBirth" aria-required="true">
+                                            <input type="date" class="form-control" name="dob" id="dob" placeholder="Enter DateOfBirth *" aria-required="true"/>
                                         </div>
                                         
                                     </div>
@@ -189,16 +189,16 @@
                                     <div class="profession mt-2">
                                         <select class="form-select"  name="profession" onchange="choosepro()">
                                             <option value="" selected name="profession">Select Your profession</option>
-                                            <optgroup label="employed">
-                                                <option value="Employed-Government" name="profession" area-label="government" >Government</option>
-                                            <optgroup label="Private">
-                                                <option value="Private-small scale industry" name="profession" area-label="siru thozhil" >Small Scale Industry</option>
-                                                <option value="Private-Medium Scale Industry" name="profession" area-label="naduthara thozhil" >Medium Scale Industry</option>
-                                                <option value="Private-Large Scale Industry" name="profession" area-label="peru niruvanam" >Large Scale Industry</option>
-                                            </optgroup>
-                                            </optgroup>
-                                            <option value="selfemployed" name="profession" id="profession" area-label="suyathozhil" >Selfemployed</option>
-                                            <option value="Unemployed" name="profession" id="profession" area-label="velai thedubavar" >Unemployed</option>
+<!--                                             <optgroup label="employed"> -->
+                                                <option value="Government" name="profession" >Government</option>
+<!--                                             <optgroup label="Private"> -->
+                                                <option value="Private" name="profession"  >Private</option>
+                                                <option value="Selfemployed" name="profession"  >Selfemployed</option>
+                                                <option value="Unemployed" name="profession"  >Unemployed</option>
+<!--                                             </optgroup> -->
+<!--                                             </optgroup> -->
+                                            <option value="Student" name="profession" id="profession"  >Student</option>
+<!--                                             <option value="Unemployed" name="profession" id="profession" >Unemployed</option> -->
                                         </select>
                                     </div>
 
@@ -211,7 +211,7 @@
                                         <label class="form-label fw-semibold" for="pincode" >Pincode</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/67/67347.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Enter Pincode *" aria-required="true">
+                                            <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Enter Pincode *" aria-required="true"/>
                                         </div>
                                        
                                     </div>
@@ -219,8 +219,8 @@
                                         <label class="form-label fw-semibold" for="dob" area-label="adaiyaalasol">Create PIN</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/102/102643.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="password" class="form-control" name="pass" id="pass" aria-labelledby="etho" placeholder="Enter 4 Digit PIN" aria-required="true">
-                                            <span id="etho" class="d-none" aria-hidden="true">This will be your login password</span>
+                                            <input type="password" class="form-control" name="pass" id="pass" aria-labelledby="etho" placeholder="Enter 4 Digit PIN" aria-required="true"/>
+                                            <span id="etho" class="d-none" aria-hidden="true">This will be your login Pin</span>
                                         </div>
                                         
                                     </div>
@@ -234,7 +234,7 @@
                                </div>
                                  <div class="col log" id="collapseExample">
                                     
-                                    <h3 class="text-center text-uppercase fw-bold" area-label="nulaivu">Login</h3>
+                                    <h3 class="text-center text-uppercase fw-bold">Login</h3>
 
                                     <form method="post" action="">
                                         
@@ -243,7 +243,7 @@
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/126/126509.png" class="input-group-text" width="48px" alt=""> 
                                                 <input type="tel" id="logphone" class="form-control" name="logphone"
-                                                placeholder="Enter Phone Number" />
+                                                placeholder="Enter Phone Number *" aria-required="true" />
                                             </div>
                                             
                                         </div>
@@ -252,13 +252,13 @@
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/102/102643.png" class="input-group-text" width="48px" alt=""> 
                                                 <input type="password" id="passpin" class="form-control" name="logpin"
-                                                placeholder="Enter 4 Digit PIN" />
+                                                placeholder="Enter 4 Digit PIN"  aria-required="true" />
                                                 
                                             </div>
                                            
                                         </div>
                                         <p id="err" class="text-danger fs-bold p-1"></p>
-                                        <div class="d-flex justify-content-center" area-label="nulaivu">
+                                        <div class="d-flex justify-content-center" >
                                              <button type="button" class="btn btn-success mt-4 sha1"  onclick="login1()">Login</button>
                                            
                                         </div>
