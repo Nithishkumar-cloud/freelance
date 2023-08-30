@@ -60,7 +60,8 @@
                         <div class="card-body"> -->
                             <div class="row">
                                 <div class="col register">
-                                   <div> <h3 class="text-center text-uppercase fw-bold">Registration</h3></div>
+<!--                                    <h3 class="text-center text-uppercase fw-bold">Registration</h3> -->
+                                    <div class="text-center text-uppercase fw-bold fs-4">Registration</div>
                                     <form action=""  method="POST">
                                         <div class="formtxt mt-3">
                                             <label class="form-label fw-semibold" for="formname">Name</label>
@@ -74,19 +75,19 @@
                                         <span class="d-none" aria-hidden="true" id="gen">Please select Anyone Gender from Radio Button</span>
                                         <div class="btn-group mt-2" name="gender">
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype1"
-                                                 value="Male"  onclick="choosegen()">
+                                                 value="Male"  aria-label="selected gender male" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype1" >Male</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype2"
-                                                value="Female"  onclick="choosegen()">
+                                                value="Female"  aria-label="selected gender female" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype2" >Female</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype3"
-                                                value="TransGender"  onclick="choosegen()">
+                                                value="TransGender"   aria-label="selected gender transgender" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype3" >Trans<br>Gender</label>
                                             
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype4"
-                                                value="Choose Not To Say"  onclick="choosegen()">
+                                                value="Choose Not To Say"  aria-label="selected Not to say" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype4" >Not<br>To Say</label>
                                         </div>
                                         <div class="mt-2">
@@ -95,7 +96,7 @@
                                            
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/126/126509.png" class="input-group-text" width="48px" alt="">
-                                                <input type="tel" id="formphone" class="form-control" name="phone"  placeholder="Enter Phone Number"  max="10" aria-required="true">
+                                                <input type="tel" id="formphone" class="form-control" name="phone"  placeholder="Enter Phone Number *"  max="10" aria-required="true">
                                                 
                                             </div>
                                            
@@ -106,7 +107,7 @@
                                            
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/152/152740.png" class="input-group-text" width="48px" alt="">
-                                                <input type="tel" id="whatsapp" class="form-control"  placeholder="Enter Whatsapp Number"  max="10" aria-required="true">
+                                                <input type="tel" id="whatsapp" class="form-control"  placeholder="Enter Whatsapp Number *"  max="10" aria-required="true" aria-hidden="true" aria-placeholder="Enter Whatsapp Number">
                                                 
                                             </div>
                                            
@@ -128,7 +129,7 @@
                                         <div class="formper mt-2">
                                             <label class="form-label fw-semibold" for="form1" area-label="kuraipaadu sathavitham">Disability Percentage</label>
                                             <input type="text" id="form1" name="per" class="col-2 form-control " max="100"
-                                                   accuracy="2" style="width:45%" placeholder="Enter Disability Percentage aria-required="true"">
+                                                   accuracy="2" style="width:45%" placeholder="Enter Disability Percentage aria-required="true">
                                         </div>
                                         <div class="address mt-1">
                                             <label class="form-label fw-semibold" for="add1" area-label="mugavari">Current Address</label>
