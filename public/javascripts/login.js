@@ -48,8 +48,8 @@ function choosereq(){
 function choosechi(){
     dt = document.querySelector('input[name="child"]:checked').value;
     console.log(dt);
-    let speech = new SpeechSynthesisUtterance("your Disability Type"+dt+"selected successfully");
-      speechSynthesis.speak(speech);
+    // let speech = new SpeechSynthesisUtterance("your Disability Type"+dt+"selected successfully");
+    //   speechSynthesis.speak(speech);
 }
 
      async function register1(){
