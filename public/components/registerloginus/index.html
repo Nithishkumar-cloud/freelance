@@ -60,33 +60,33 @@
                         <div class="card-body"> -->
                             <div class="row">
                                 <div class="col register">
-                                    <h3 class="text-center text-uppercase fw-bold">Registration</h3>
+                                   <div> <h3 class="text-center text-uppercase fw-bold">Registration</h3></div>
                                     <form action=""  method="POST">
                                         <div class="formtxt mt-3">
                                             <label class="form-label fw-semibold" for="formname">Name</label>
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/3185/3185865.png" class="input-group-text" width="48px" alt=""> 
-                                                <input type="text" id="formname" class="form-control" name="name" placeholder="Enter Name"/>
+                                                <input type="text" id="formname" class="form-control" name="name" placeholder="Enter Name *" aria-required="true"/>
                                             </div>
                                             
                                         </div>
-                                        <label class="form-label mt-2 fw-semibold" area-labelledby="gen">Gender</label><br>
+                                        <label class="form-label mt-2 fw-semibold" aria-labelledby="gen">Gender</label><br>
                                         <span class="d-none" aria-hidden="true" id="gen">Please select Anyone Gender from Radio Button</span>
                                         <div class="btn-group mt-2" name="gender">
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype1"
-                                                 value="Male" area-label="aan" onclick="choosegen()">
+                                                 value="Male"  onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype1" >Male</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype2"
-                                                value="Female" area-label="pen" onclick="choosegen()">
+                                                value="Female"  onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype2" >Female</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype3"
-                                                value="TransGender" area-label="maatru paalinam" onclick="choosegen()">
+                                                value="TransGender"  onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype3" >Trans<br>Gender</label>
                                             
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype4"
-                                                value="Choose Not To Say" area-label="maatru paalinam" onclick="choosegen()">
+                                                value="Choose Not To Say"  onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype4" >Not<br>To Say</label>
                                         </div>
                                         <div class="mt-2">
@@ -95,7 +95,7 @@
                                            
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/126/126509.png" class="input-group-text" width="48px" alt="">
-                                                <input type="tel" id="formphone" class="form-control" name="phone"  placeholder="Enter Phone Number"  max="10">
+                                                <input type="tel" id="formphone" class="form-control" name="phone"  placeholder="Enter Phone Number"  max="10" aria-required="true">
                                                 
                                             </div>
                                            
@@ -106,7 +106,7 @@
                                            
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/152/152740.png" class="input-group-text" width="48px" alt="">
-                                                <input type="tel" id="whatsapp" class="form-control"  placeholder="Enter Whatsapp Number"  max="10">
+                                                <input type="tel" id="whatsapp" class="form-control"  placeholder="Enter Whatsapp Number"  max="10" aria-required="true">
                                                 
                                             </div>
                                            
@@ -128,15 +128,15 @@
                                         <div class="formper mt-2">
                                             <label class="form-label fw-semibold" for="form1" area-label="kuraipaadu sathavitham">Disability Percentage</label>
                                             <input type="text" id="form1" name="per" class="col-2 form-control " max="100"
-                                                   accuracy="2" style="width:35%" placeholder="Enter Disability Percentage">
+                                                   accuracy="2" style="width:45%" placeholder="Enter Disability Percentage aria-required="true"">
                                         </div>
                                         <div class="address mt-1">
                                             <label class="form-label fw-semibold" for="add1" area-label="mugavari">Current Address</label>
-                                            <textarea id="add1" name="area" class="col-2 form-control" ></textarea>
+                                            <textarea id="add1" name="area" class="col-2 form-control" aria-required="true" ></textarea>
                                         </div>
                                         <div class=" mt-1">
                                             <label class="form-label fw-semibold" for="add2" area-label="mugavari">Permanent Address</label>
-                                            <textarea id="add2" name="area" class="col-2 form-control" ></textarea>
+                                            <textarea id="add2" name="area" class="col-2 form-control" aria-required="true"></textarea>
                                         </div>
                                 </div>
 
@@ -146,7 +146,7 @@
                                         <label class="form-label fw-semibold" for="aadhar" area-label="aadhar aen">Aadhar Card Number</label>
                                         <div class="input-group">
                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7I5HDnmXP86FUWMDu8o5qPhGbvF6CYAFiA&usqp=CAU" class="input-group-text" width="58px"  alt=""> 
-                                            <input type="text" class="form-control" name="aadharnumber" id="aadhar" placeholder="Enter 12 Digit Aadharcard Number">
+                                            <input type="text" class="form-control" name="aadharnumber" id="aadhar" placeholder="Enter 12 Digit Aadharcard Number" aria-required="true">
                                         </div>
                                         
                                     </div>
@@ -154,7 +154,7 @@
                                         <label class="form-label fw-semibold" for="udid/sdid" area-label="udid/sdid aen">UDID/SDID Number</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/684/684833.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="text" class="form-control" name="udid" id="udid/sdid" placeholder="Enter UDID/SDID Number">
+                                            <input type="text" class="form-control" name="udid" id="udid/sdid" placeholder="Enter UDID/SDID Number" aria-required="true">
                                         </div>
                                        
                                     </div>
@@ -162,14 +162,15 @@
                                         <label class="form-label fw-semibold" for="dob" area-label="pirantha thedhi">Date Of Birth</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/2195/2195392.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="date" class="form-control" name="dob" id="dob" placeholder="Enter DateOfBirth">
+                                            <input type="date" class="form-control" name="dob" id="dob" placeholder="Enter DateOfBirth" aria-required="true">
                                         </div>
                                         
                                     </div>
-                                    <label class="form-label mt-2 fw-semibold" area-label="kuraipaadu vagai">Type Of Request</label><br>
+                                    <label class="form-label mt-2 fw-semibold" aria-labelledby="rqt">Type Of Request</label><br>
+                                    <span class="d-none" aria-hidden="true">Please Select any one type of request</span>
                                         <div class="btn-group mt-2" name="requesttype">
                                             <input type="radio" class="btn-check" name="requesttype" id="type1"
-                                                 value="Goods" area-label="siruvaiyathil irunthu" onclick="choosereq()">
+                                                 value="Goods" area-label="siruvaiyathil irunthu"  onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type1" >Goods</label>
 
                                             <input type="radio" class="btn-check" name="requesttype"  id="type2"
@@ -202,14 +203,14 @@
 
                                     <div class="discer mt-2">
                                         <label class="form-label fw-semibold" for="certificate">Disability Certificate</label><br>
-                                        <input type="file" id="certificate" name="imgsrc" accept="image/*" aria-labelledby="cer">
+                                        <input type="file" id="certificate" name="imgsrc" accept="image/*" aria-labelledby="cer" aria-required="true">
                                         <span id="cer" aria-hidden="true" class="d-none">Please click on Browse To Upload disability certificate</span>
                                     </div>
                                     <div class="mt-2">
-                                        <label class="form-label fw-semibold" for="pincode" area-label="anjal kuriyidu" >Pincode</label>
+                                        <label class="form-label fw-semibold" for="pincode" >Pincode</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/67/67347.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Enter Pincode">
+                                            <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Enter Pincode *" aria-required="true">
                                         </div>
                                        
                                     </div>
@@ -217,7 +218,7 @@
                                         <label class="form-label fw-semibold" for="dob" area-label="adaiyaalasol">Create PIN</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/102/102643.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="password" class="form-control" name="pass" id="pass" aria-labelledby="etho" placeholder="Enter 4 Digit PIN">
+                                            <input type="password" class="form-control" name="pass" id="pass" aria-labelledby="etho" placeholder="Enter 4 Digit PIN" aria-required="true">
                                             <span id="etho" class="d-none" aria-hidden="true">This will be your login password</span>
                                         </div>
                                         
