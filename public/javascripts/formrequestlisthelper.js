@@ -111,7 +111,7 @@ function help(id){
                 let b=a.slice(0,10);
                 console.log(b);
               code=code+`  
-             <div class="card mt-5 shadow rounded rounded-5 bg-light">
+              <div class="card mt-5 shadow rounded rounded-5 bg-light">
             <div class="card-body">
                 
              <div class="row d-flex flex-column">
@@ -121,6 +121,12 @@ function help(id){
                         <div id="datetime">${b}</div>
                     </div>
                    
+                </div>
+             <div class="col p-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="fw-semibold fst-italic">Subject</div>
+                        <div >${res.Subject}</div>
+                    </div>
                 </div>
                 <div class="col p-2">
                     <div class="d-flex justify-content-between align-items-center">
@@ -134,6 +140,19 @@ function help(id){
                         <div >${res.Phone}</div>
                     </div>
                 </div>
+            
+                <div class="col p-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="fw-semibold fst-italic">Cost</div>
+                        <div >${res.Cost}</div>
+                    </div>
+                </div>
+                 <div class="col p-2">
+                        <div class="d-flex flex-column ">
+                            <div class="fw-semibold fst-italic">Short Description</div>
+                            <div >${res.Description}</div>
+                        </div>
+                  </div>
                  <div class="col p-2">
                         <div class="d-flex flex-column">
                            <div class="fw-semibold fst-italic">Long Description</div>
