@@ -47,5 +47,17 @@ router.get('/services',(req,res) => {
 router.get('/guidance',(req,res) => {
   res.sendFile(path.join(__dirname, "../../public/components/Guidance/guidance.html"));
 });
+router.get('/formrequest',(req,res)=>{
+    res.sendFile(path.join(__dirname,"../../public/components/FormRequest/formrequest.html"));
+});
+
+router.get('/requestlist',(req,res)=>{
+    res.sendFile(path.join(__dirname,"../../public/components/RequestList/requestlist.html"));
+});
+
+router.get('/formrequesthelper',(req,res)=>{
+    res.sendFile(path.join(__dirname,"../../public/components/FormRequestHelper/formrequesthelper.html")); 
+});
+
 
   module.exports=router;
