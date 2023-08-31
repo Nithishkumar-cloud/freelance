@@ -1,5 +1,5 @@
 const express=require('express');
-const {registeruser,loginuser, registeruserhelper, loginhelper,LogOutuser,changepin,sessionids, sessionidhelper, phoneupdate, percentageupdate,PinUpdate,dobupdate,Addressupdate,pinhelper,dobhelper,phonehelper,addresshelper,genhelper, read,Profession,PerAddressupdate,whatphoneupdate}=require('../controllers/authcontrollers');
+const {registeruser,loginuser, registeruserhelper, loginhelper,LogOutuser,changepin,sessionids, sessionidhelper, phoneupdate, percentageupdate,PinUpdate,dobupdate,Addressupdate,pinhelper,dobhelper,phonehelper,addresshelper,genhelper, read,Profession,PerAddressupdate,whatphoneupdate,request,requestdatalist,requestlisthelper}=require('../controllers/authcontrollers');
 const router=express.Router();
 const path=require('path');
 //const upload=require('../middleware/upload');
@@ -39,8 +39,11 @@ router.route('/pinupdatehelper').post(pinhelper);
 router.route('/gender').post(genhelper);
 
 //requestType
+router.route('/req').post(request);
 
-router.route('/request').post(read);
+//requestLists
 
+router.route('/rqtdatalist').post(requestdatalist);
+router.route('/reqlisthelper').post(requestlisthelper);
 
 module.exports=router;
