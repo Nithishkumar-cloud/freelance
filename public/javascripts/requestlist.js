@@ -1,7 +1,7 @@
 const sessionid=localStorage.getItem('sessionid');
 let q=localStorage.getItem('listdataid');
 console.log("dsjdh");
-let r=axios.post("http://localhost:21021/rqtdatalist",{datalist:q});
+let r=axios.post("https://attractive-pear-apron.cyclic.app/rqtdatalist",{datalist:q});
 
 let htmlcode=``;
         
@@ -74,7 +74,7 @@ let htmlcode=``;
            
          
           async function logout() {
-            var c = axios.post("http://localhost:21021/logout", { id: sessionid });
+            var c = axios.post("https://attractive-pear-apron.cyclic.app/logout", { id: sessionid });
             
             c.then(function(result){
                 console.log(result.data.logoutmsg);
