@@ -589,10 +589,77 @@ exports.pinhelper=async(req,res,next)=>{
   }
 };
 
-exports.read=async(req, res, next)=>{
-  const sessionid=req.body.details.storage;
-  console.log(sessionid);
-  const type=req.body.details.type;
-  console.log(type);
+exports.request=async(req, res, next)=>{
+  const sessionId=req.body.data.sesid;
+  console.log(sessionId);
+  const Subject=req.body.data.sub;
+  const Cost=req.body.data.cost;
+  const Description=req.body.data.des;
+  const Longdes=req.body.data.longdes;
+  
+  
+  const session=await sessionid.findOne({sessionId});
+ 
+  const _id=session.objectid;
+  
+  const userlog=await usermodel.findOne({_id});
+  console.log(userlog);
+  if(userlog){
+      const Username=userlog.Name;
+      //console.log(Username);
+      const UserId=userlog._id;
+      //console.log(UserId);
+     const Pincode=userlog.Pincode;
+     //console.log(Pincode);
+     const RequestType=userlog.RequestType;
+     //console.log(RequestType);
+     const Phone=userlog.Phone;
+     //console.log(Phone);
+         const reqt=await Requestus.create({
+               Subject,
+               Cost,
+               Description,
+               Longdes,
+              Username,
+               UserId,
+               Pincode,
+               Phone,
+               RequestType
+        });
+        //console.log(reqt);
+        res.json({reqt});
+  }
+ 
 
+};
+
+exports.requestdatalist=async(req,res,next)=>{
+    
+    const UserId=req.body.datalist;
+    console.log(UserId);
+    if(UserId){
+        const list=await Requestus.find({UserId});
+        res.json({list});
+    }
+   
+};
+
+exports.requestlisthelper=async(req,res,next)=>{
+    
+    const sessionIdHelper=req.body.list;
+      const session=await sessionidhelper.findOne({sessionIdHelper});
+ 
+    const _id=session.objectid;
+     const userlog=await usermodelhelp.findOne({_id});
+     if(userlog){
+         const Pincode=userlog.Pincode;
+         console.log(Pincode);
+         const RequestTypeHelp=userlog.RequestTypeHelp;
+         console.log(RequestTypeHelp);
+         //const lists=await Requestus.find({$and:[{"Pincode":{"$eq":Pincode}},{"RequestType":{"$eq":RequestTypeHelp}}]});
+         const lists=await Requestus.find({$and:[{"Pincode":{"$eq":Pincode}}]});
+         console.log(lists);
+         res.json({lists});
+     }
+     
 };
