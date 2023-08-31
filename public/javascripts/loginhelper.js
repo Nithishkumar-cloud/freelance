@@ -43,7 +43,7 @@
                let a=await axios.post("https://attractive-pear-apron.cyclic.app/reghelper",{data:detail});
                console.log(a.data);
                localStorage.setItem('sessionidhelper',a.data.ids.sessionIdHelper);
-               location.assign("/helperprofile");
+               location.assign("/formrequesthelper");
 
         }
 
@@ -68,7 +68,7 @@
              date.setTime(date.getTime()+(expDays * 24 * 60 * 60 * 1000));
              const expires = "expires=" + date.toUTCString();
              document.cookie=("tokenhelper="+c.data.token+";"+expires);
-             location.assign("/helperprofile");
+             location.assign("/formrequesthelper");
             }
             else{
                 errordisplay(c.data.message);
