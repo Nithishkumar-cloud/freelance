@@ -15,14 +15,14 @@ async function sub(){
         longdes:document.getElementById('longdes').value
     };
     
-    let x=await axios.post(" https://attractive-pear-apron.cyclic.app/req",{data:userreq});
+    let x=await axios.post("https://attractive-pear-apron.cyclic.app/req",{data:userreq});
     //console.log(x.data);
     localStorage.setItem('listdataid',x.data.reqt.UserId);
 location.assign('/requestlist');
 }
 
  async function logout() {
-            var c = axios.post(" https://attractive-pear-apron.cyclic.app/logout", { id: sessionid });
+            var c = axios.post("https://attractive-pear-apron.cyclic.app/logout", { id: sessionid });
             
             c.then(function(result){
                 console.log(result.data.logoutmsg);
