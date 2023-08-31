@@ -3,7 +3,7 @@ const sessionidhelper=localStorage.getItem('sessionidhelper');
 window.onload=function(){
     
      let q=localStorage.getItem('sessionidhelper');
-     let x=axios.post("http://localhost:21021/reqlisthelper",{list:q});
+     let x=axios.post(" https://attractive-pear-apron.cyclic.app/reqlisthelper",{list:q});
      
       let htmlcode=``;
      x.then((result)=>{
@@ -82,7 +82,7 @@ window.onload=function(){
 };
 
     async function logout() {
-                var c=axios.post("http://localhost:21021/logout",{id:sessionidhelper});
+                var c=axios.post(" https://attractive-pear-apron.cyclic.app/logout",{id:sessionidhelper});
                 localStorage.removeItem("sessionidhelper");
                document.cookie = "tokenhelper=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
                 location.assign("/");
