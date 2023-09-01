@@ -8,6 +8,16 @@ let gnd = "";
 window.onload = function load() {
         register();
     };
+
+function che(){
+    
+         if(document.getElementById('ch').checked===true){
+            document.getElementById('add2').value=document.getElementById('add1').value;
+         }
+         else if(document.getElementById('ch').checked===false){
+            document.getElementById('add2').value="";
+         }  
+   }
     function login() {
         document.querySelector('.register').style.display='none ';
         document.querySelector('.register1').style.display='none ';
