@@ -39,7 +39,7 @@ async function sub(){
     else{
          let x=await axios.post("https://attractive-pear-apron.cyclic.app/req",{data:userreq});
     //console.log(x.data);
-         localStorage.setItem('listdataid',x.data.reqt.UserId);
+         //localStorage.setItem('listdataid',x.data.reqt.UserId);
          location.assign('/requestlist');
     }
 }
