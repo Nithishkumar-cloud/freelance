@@ -24,7 +24,22 @@
            
            
         }
-        
+
+     function ser(){
+            localStorage.setItem('kindofreq',"Services");
+            console.log(localStorage.setItem('kindofreq',"services"));
+            location.assign('/services');
+        }
+        function gui(){
+            localStorage.setItem('kindofreq',"Guidance");
+            console.log(localStorage.setItem('kindofreq',"Guidance"));
+            location.assign('/services');
+        }
+        function go(){
+            localStorage.setItem('kindofreq',"Goods");
+            console.log(localStorage.setItem('kindofreq',"Goods"));
+            location.assign('/services');
+        }
         
          /*   function read(){
                 let read={
