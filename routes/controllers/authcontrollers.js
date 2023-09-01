@@ -594,7 +594,7 @@ exports.request=async(req, res, next)=>{
   const sessionId=req.body.data.sesid;
   console.log(sessionId);
   const Subject=req.body.data.sub;
-  const Cost=req.body.data.cost;
+  const Cost=req.body.data.at;
   const Description=req.body.data.des;
   const Longdes=req.body.data.longdes;
   
