@@ -15,17 +15,7 @@ const sessionid = localStorage.getItem('sessionid');
             const h=document.getElementById('whatphone').innerHTML=result.data.values.Whatsapp;
         });
         
-function choosepro(){
-    pr = document.querySelector('input[name="profession"]:checked').value;
-    console.log(pr);
-    if(pr===""){
-        errordisplayreg("Please Enter Your Profession");
-    }else{
-        let speech = new SpeechSynthesisUtterance("your profession"+pr+"selected successfully");
-      speechSynthesis.speak(speech);
-    }
-    
-}
+
         async function logout() {
             var c = axios.post("https://attractive-pear-apron.cyclic.app/logout", { id: sessionid });
             
@@ -234,7 +224,7 @@ function choosepro(){
         async function profession(){
             const details={
                 sessionid:localStorage.getItem('sessionid'),
-                profession:document.querySelector('option[name="profession"]:checked').value
+                profession:document.querySelector('input[name="profession"]:checked').value
             };
             if(details.profession===""){
                 document.getElementById('proerr').style.display="block";
