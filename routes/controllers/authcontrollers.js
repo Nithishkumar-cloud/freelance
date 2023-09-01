@@ -636,12 +636,17 @@ exports.request=async(req, res, next)=>{
 
 exports.requestdatalist=async(req,res,next)=>{
     
-    const UserId=req.body.datalist;
+     const sessionId=req.body.datalist;
+    console.log(sessionId);
+     const session=await sessionid.findOne({sessionId});
+    const UserId=session.objectid;
     console.log(UserId);
     if(UserId){
         const list=await Requestus.find({UserId});
+        console.log(list);
         res.json({list});
     }
+   
    
 };
 
