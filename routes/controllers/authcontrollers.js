@@ -657,8 +657,8 @@ exports.requestlisthelper=async(req,res,next)=>{
          console.log(Pincode);
          const RequestTypeHelp=userlog.RequestTypeHelp;
          console.log(RequestTypeHelp);
-         //const lists=await Requestus.find({$and:[{"Pincode":{"$eq":Pincode}},{"RequestType":{"$eq":RequestTypeHelp}}]});
-         const lists=await Requestus.find({$and:[{"Pincode":{"$eq":Pincode}}]});
+         const lists=await Requestus.find({$and:[{"Pincode":{"$eq":Pincode}},{"RequestType":{"$eq":RequestTypeHelp}}]});
+        // const lists=await Requestus.find({$and:[{"Pincode":{"$eq":Pincode}}]});
          console.log(lists);
          res.json({lists});
      }
