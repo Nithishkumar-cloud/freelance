@@ -1,7 +1,8 @@
 const sessionid=localStorage.getItem('sessionid');
-let q=localStorage.getItem('listdataid');
-console.log("dsjdh");
-let r=axios.post("https://attractive-pear-apron.cyclic.app/rqtdatalist",{datalist:q});
+//let q=localStorage.getItem('listdataid');
+const Req=localStorage.getItem('kindofreq');
+
+let r=axios.post("https://attractive-pear-apron.cyclic.app/rqtdatalist",{datalist:sessionid});
 
 let htmlcode=``;
         
@@ -33,7 +34,7 @@ let htmlcode=``;
                  <div class="col p-2">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="fw-semibold fst-italic">Request Type</div>
-                            <div >${res.RequestType}</div>
+                            <div >${Req}</div>
                         </div>
                     </div>
                 <div class="col p-2">
