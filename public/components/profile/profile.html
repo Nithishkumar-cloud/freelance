@@ -72,8 +72,9 @@
                                                                 data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <input type="number" class="rounded rounded-pill p-1"
-                                                                id="phoneinput">
+                                                             <label class="m-1">Enter Phone Number</label><br>
+                                                            <input type="tel" class="rounded rounded-pill p-1 mt-3"
+                                                                id="phoneinput" maxlength="10">
                                                                 <p id="phoneerr" class="fw-bold text-danger"></p>
                                                                 <p id="phoneerrmsg" class="fw-bold text-success"></p>
                                                                 
@@ -97,7 +98,7 @@
 
                                             <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
                                                 data-bs-target="#whatsappmodal" aria-label="Click on this button to edit Whatsapp number" role="button"></i>
-                                            <span id="whatphone" class="d-none" aria-hidden="true">Click on this button to edit Whatsapp number</span>
+                                            <span id="whatphone" class="d-none" aria-hidden="true">Edit Whatsapp number</span>
 
                                             <!-- Modal -->
                                             <div class="modal fade" id="whatsappmodal" tabindex="-1"
@@ -111,8 +112,9 @@
                                                                 data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <input type="number" class="rounded rounded-pill p-1"
-                                                                id="whatphoneinput">
+                                                             <label class="m-1">Enter Whatsapp Number</label><br>
+                                                            <input type="tel" class="rounded rounded-pill p-1 mt-3"
+                                                                id="whatphoneinput" maxlength="10">
                                                                 <p id="whaterr" class="fw-bold text-danger"></p>
                                                                 <p id="whaterrmsg" class="fw-bold text-success" ></p>
                                                         </div>
@@ -136,7 +138,7 @@
                                             <p class='text-muted' id="add"></p>
                                             <i class="bi bi-pencil-fill text-danger" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal2" aria-labelledby="addressread" role="button"></i>
-                                           <span id="addressread" class="d-none" aria-hidden="true">Click on this button to edit Current Address</span>
+                                           <span id="addressread" class="d-none" aria-hidden="true">Edit Current Address</span>
                                         <!-- Modal -->
                                         <div class="modal fade" id="exampleModal2" >
                                             <div class="modal-dialog">
@@ -148,7 +150,8 @@
                                                             data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <input type="text" class="rounded rounded-pill p-1"
+                                                         <label class="m-1">Enter Current Address</label><br>
+                                                        <input type="text" class="rounded rounded-pill p-1 mt-3"
                                                             id="address">
                                                             <p id="adderr" class="fw-semibold text-danger"></p>
                                                              <p id="adderrmsg" class="fw-semibold text-success"></p>
@@ -171,7 +174,7 @@
                                             <p class='text-muted' id="peradd"></p>
                                             <i class="bi bi-pencil-fill text-danger" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal9" aria-labelledby="peraddre" role="button"></i>
-                                           <span id="peraddre" class="d-none" aria-hidden="true">Click on this button to edit Permanent Address</span>
+                                           <span id="peraddre" class="d-none" aria-hidden="true">Edit Permanent Address</span>
                                         <!-- Modal -->
                                         <div class="modal fade" id="exampleModal9" >
                                             <div class="modal-dialog">
@@ -183,7 +186,8 @@
                                                             data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <input type="text" class="rounded rounded-pill p-1"
+                                                         <label class="m-1">Enter Permanent Address</label><br>
+                                                        <input type="text" class="rounded rounded-pill p-1 mt-3"
                                                             id="peraddress">
                                                             <p id="peradderr" class="fw-semibold text-danger"></p>
                                                             <p id="peradderrmsg" class="fw-semibold text-success"></p>
@@ -222,8 +226,9 @@
                                                             data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <input type="number" class="rounded rounded-pill p-1"
-                                                            id="perinput">
+                                                         <label class="m-1">Enter Disability Percentage</label><br>
+                                                        <input type="number" class="rounded rounded-pill p-1 mt-3"
+                                                            id="perinput" maxlength="3">
                                                             <p id="diserr" class="fw-semibold text-danger"></p>
                                                             <p id="diserrmsg" class="fw-semibold text-success"></p>
                                                     </div>
@@ -246,19 +251,20 @@
                                             <!-- role=button is for (is equal to) cursor pointer -->
                                             <i class="bi bi-pencil-fill text-danger mx-2" data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal1" aria-labelledby="dob" role="button"></i>
-                                            <span id="dob" class="d-none" aria-hidden="true">Click on this button to edit Date Of Birth</span>
+                                            <span id="dob" class="d-none" aria-hidden="true">Edit Date Of Birth</span>
                                             <!-- Modal -->
                                             <div class="modal fade" id="exampleModal1" tabindex="-1"
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel" area-label="">Date Of Birth</h1>
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel" >Date Of Birth</h1>
                                                             <button type="button" class="btn-close"
                                                                 data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <input type="text" class="rounded rounded-pill p-1"
+                                                             <label class="m-1">Enter DateofBirth</label><br>
+                                                            <input type="text" class="rounded rounded-pill p-1 mt-3"
                                                             id="dobinput">
                                                             <p id="doberr" class="fw-semibold text-danger"></p>
                                                             <p id="doberrmsg" class="fw-semibold text-success"></p>
@@ -345,8 +351,10 @@
                                                                 data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <input type="password" class="rounded rounded-pill p-1" id="oldpass">
-                                                            <input type="password" class="rounded rounded-pill p-1"
+                                                             <label class="m-1">Enter Old Pin</label><br>
+                                                            <input type="password" class="rounded rounded-pill p-1 mt-2" id="oldpass">
+                                                             <label class="m-1">Enter New Pin</label><br>
+                                                            <input type="password" class="rounded rounded-pill p-1 mt-2"
                                                                 id="newpass">
                                                                 <p id="pinerr" class="fw-semibold text-danger"></p>
                                                                 <p id="pinerrmsg" class="fw-semibold text-success"></p>
