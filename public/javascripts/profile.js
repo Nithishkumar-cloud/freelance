@@ -1,3 +1,4 @@
+let pr="";
 const sessionid = localStorage.getItem('sessionid');
 
         var x = axios.post("https://attractive-pear-apron.cyclic.app/ids", { id: sessionid });
@@ -220,11 +221,22 @@ const sessionid = localStorage.getItem('sessionid');
             
             
         }
+function choosepro(){
+    pr = document.querySelector('input[name="profession"]:checked').value;
+    console.log(pr);
+    if(pr===""){
+        errordisplayreg("Please Enter Your Profession");
+    }else{
+        let speech = new SpeechSynthesisUtterance("your profession"+pr+"selected successfully");
+      speechSynthesis.speak(speech);
+    }
+    
+}
 
         async function profession(){
             const details={
                 sessionid:localStorage.getItem('sessionid'),
-                profession:document.querySelector('input[name="profession"]:checked').value
+                profession:pr
             };
             if(details.profession===""){
                 document.getElementById('proerr').style.display="block";
