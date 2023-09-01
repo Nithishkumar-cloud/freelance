@@ -301,22 +301,28 @@
                                                             data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <label class="mt-2 fw-semibold" area-label="ungal thozhil">Select Your Profession</label>
-                                           <div class="profession">
-                                               <select class="form-select" aria-label="thozhil" name="profession" required>
-                                            <option selected>Select your profession</option>
-                                            <optgroup label="employed">
-                                                <option value="Employed-Government" name="profession" area-label="government">Government</option>
-                                            <optgroup label="Private">
-                                                <option value="Private-small scale industry" name="profession"  area-label="siru thozhil">Small Scale Industry</option>
-                                                <option value="Private-Medium Scale Industry" name="profession"  area-label="naduthara thozhil">Medium Scale Industry</option>
-                                                <option value="Private-Large Scale Industry" name="profession"  area-label="peru niruvanam">Large Scale Industry</option>
-                                            </optgroup>
-                                            </optgroup>
-                                            <option value="selfemployed" name="profession"  area-label="suyathozhil">Selfemployed</option>
-                                            <option value="Unemployed" name="profession" area-label="velai thedubavar">Unemployed</option>
-                                             </select>
-                                                </div>
+                                                        <label class="form-label mt-2 fw-semibold" area-label="ungal thozhil">Select Your Profession</label>
+                                            <div class="mt-2 row p-1" role="radiogroup" aria-labelledby="genrd">
+                                            <span class="d-none" aria-hidden="true" id="genrd">Please select Anyone Gender from Radio Button</span>
+                                            <input type="radio" class="btn-check" name="profession" id="pro1" autocomplete="off"
+                                                 value="Government" area-label="aan" onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1 " for="pro1" aria-hidden="true">Government</label>
+
+                                            <input type="radio" class="btn-check" name="profession" id="pro2" autocomplete="off"
+                                                value="Private" area-label="pen" onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro2" aria-hidden="true">Private</label>
+
+                                            <input type="radio" class="btn-check" name="profession" id="pro3" autocomplete="off"
+                                                value="Selfemployed" area-label="maatru paalinam" onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro3" aria-hidden="true">Selfemployed</label>
+                                            
+                                            <input type="radio" class="btn-check" name="profession" id="pro4" autocomplete="off"
+                                                value="Unemployed" area-label="maatru paalinam" onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro4" aria-hidden="true">Unemployed</label>
+                                            <input type="radio" class="btn-check" name="profession" id="pro5" autocomplete="off"
+                                                value="Student" area-label="maatru paalinam" onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro5" aria-hidden="true">Student</label>
+                                        </div>
                                                      
                                                     </div>
                                                     <p id="proerr" class="fw-semibold text-danger"></p>
