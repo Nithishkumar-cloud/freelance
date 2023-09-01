@@ -27,7 +27,7 @@
 
      function ser(){
             localStorage.setItem('kindofreq',"Services");
-            console.log(localStorage.setItem('kindofreq',"services"));
+            console.log(localStorage.setItem('kindofreq',"Services"));
             location.assign('/services');
         }
         function gui(){
