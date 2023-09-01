@@ -1,3 +1,4 @@
+let at="";
 const sessionid=localStorage.getItem('sessionid');
 window.onload=function(){
     let q=localStorage.getItem('requesttype');
@@ -5,12 +6,18 @@ window.onload=function(){
 document.getElementById('reqval').value=q;
 };
 
+function choose(){
+      at = document.querySelector('input[name="amount"]:checked').value;
+      console.log(at);
+      let speech = new SpeechSynthesisUtterance("your Mode of Cost"+at+"selected successfully");
+      speechSynthesis.speak(speech);
+}
 async function sub(){
     
     const userreq={
         sesid:localStorage.getItem('sessionid'),
         sub:document.getElementById('reqval').value,
-        cost:document.querySelector('input[name="amount"]:checked').value,
+        //cost:document.querySelector('input[name="amount"]:checked').value,
         des:document.getElementById('des').value,
         longdes:document.getElementById('longdes').value
     };
@@ -19,7 +26,7 @@ async function sub(){
      if(userreq.sub===""){
         errordisplayreq("Nothing is selected Subject is Empty");
     }
-    else if(userreq.cost===""){
+    else if(userreq.at===""){
         errordisplayreq("Please Enter Your Mode of Cost");
     }
     else if(userreq.des===""){
@@ -55,3 +62,17 @@ async function sub(){
            
            
         }
+
+    function errordisplayreq(value) {
+    document.getElementById('errreq').style.display = "block";
+    document.getElementById('errreq').innerHTML = value;
+
+    let speech = new SpeechSynthesisUtterance(value);
+    //  speech.lang = 'ta-IN';
+    speechSynthesis.speak(speech);
+    console.log("work");
+    const timeout = setTimeout(() => {
+        document.getElementById("errreq").style.display = "none";
+    }, 6000);
+
+}
