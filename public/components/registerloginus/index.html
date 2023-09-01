@@ -185,22 +185,28 @@
                                                 value="All" area-label="samibathil" onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type4" >All</label>
                                         </div><br>
-                                    <label class="form-label mt-2 fw-semibold" area-label="ungal thozhil">Select Your Profession</label>
-                                    <div class="profession mt-2">
-                                        <select class="form-select"  name="profession" onchange="choosepro()">
-                                            <option value="" selected name="profession">Select Your profession</option>
-<!--                                             <optgroup label="employed"> -->
-                                                <option value="Government" name="profession" >Government</option>
-<!--                                             <optgroup label="Private"> -->
-                                                <option value="Private" name="profession"  >Private</option>
-                                                <option value="Selfemployed" name="profession"  >Selfemployed</option>
-                                                <option value="Unemployed" name="profession"  >Unemployed</option>
-<!--                                             </optgroup> -->
-<!--                                             </optgroup> -->
-                                            <option value="Student" name="profession" id="profession"  >Student</option>
-<!--                                             <option value="Unemployed" name="profession" id="profession" >Unemployed</option> -->
-                                        </select>
-                                    </div>
+                                    <label class="form-label mt-2 fw-semibold" >Select Your Profession</label>
+                                             <div class="mt-2 row p-1" role="radiogroup" aria-labelledby="genrd">
+                                            <span class="d-none" aria-hidden="true" id="genrd">Please select Anyone Gender from Radio Button</span>
+                                            <input type="radio" class="btn-check" name="profession" id="pro1" autocomplete="off"
+                                                 value="Government" area-label="aan" onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1 " for="pro1" aria-hidden="true">Government</label>
+
+                                            <input type="radio" class="btn-check" name="profession" id="pro2" autocomplete="off"
+                                                value="Private"  onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro2" aria-hidden="true">Private</label>
+
+                                            <input type="radio" class="btn-check" name="profession" id="pro3" autocomplete="off"
+                                                value="Selfemployed"  onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro3" aria-hidden="true">Selfemployed</label>
+                                            
+                                            <input type="radio" class="btn-check" name="profession" id="pro4" autocomplete="off"
+                                                value="Unemployed"  onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro4" aria-hidden="true">Unemployed</label>
+                                            <input type="radio" class="btn-check" name="profession" id="pro5" autocomplete="off"
+                                                value="Student"  onclick="choosepro()">
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro5" aria-hidden="true">Student</label>
+                                        </div>
 
                                     <div class="discer mt-2">
                                         <label class="form-label fw-semibold" for="certificate">Disability Certificate</label><br>
