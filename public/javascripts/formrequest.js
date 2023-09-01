@@ -15,10 +15,25 @@ async function sub(){
         longdes:document.getElementById('longdes').value
     };
     
-    let x=await axios.post("https://attractive-pear-apron.cyclic.app/req",{data:userreq});
+        
+     if(userreq.sub===""){
+        errordisplayreq("Nothing is selected Subject is Empty");
+    }
+    else if(userreq.cost===""){
+        errordisplayreq("Please Enter Your Mode of Cost");
+    }
+    else if(userreq.des===""){
+        errordisplayreq("Please Enter Your Short Description");
+    }
+    else if(userreq.longdes===""){
+        errordisplayreq("Please Enter Your Long Description");
+    }
+    else{
+         let x=await axios.post("https://attractive-pear-apron.cyclic.app/req",{data:userreq});
     //console.log(x.data);
-    localStorage.setItem('listdataid',x.data.reqt.UserId);
-location.assign('/requestlist');
+         localStorage.setItem('listdataid',x.data.reqt.UserId);
+         location.assign('/requestlist');
+    }
 }
 
  async function logout() {
