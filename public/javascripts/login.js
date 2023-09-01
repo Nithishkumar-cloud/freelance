@@ -30,7 +30,7 @@ function choosegen(){
 }
 
 function choosepro(){
-    pr = document.querySelector('option[name="profession"]:checked').value;
+    pr = document.querySelector('input[name="profession"]:checked').value;
     console.log(pr);
        if(pr===""){
             errordisplayreg("Please Enter Your Profession");
