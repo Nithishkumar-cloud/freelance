@@ -31,7 +31,7 @@
                  <form method="POST" action="">
                      <div class="row m-3 bg-light rounded rounded-4 d-flex flex-column">
                          <div class="col">
-                             <div class="text-center text-uppercase fw-bold fs-4">Request</div>
+                             <div class="text-center text-uppercase fw-bold fs-4 m-1">Request</div>
                              <div class="mt-2">
                              <label class="form-label fw-semibold">Subject</label>
                              <input type="text" class="form-control mt-2" id="reqval">
@@ -43,15 +43,15 @@
                                         <div class="btn-group mt-2" name="amount" role="radiogroup" aria-labelledby="genrd">
                                             <span class="d-none" aria-hidden="true" id="genrd">Please select Anyone Mode of cost from Radio Button</span>
                                             <input type="radio" class="btn-check" name="amount" id="btnamt"
-                                                 value="Free" autocomplete="off">
+                                                 value="Free" autocomplete="off" onclick="choose()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnamt"  >Free</label>
 
                                             <input type="radio" class="btn-check" name="amount" id="btnamt1"
-                                                value="Concession" autocomplete="off">
+                                                value="Concession" autocomplete="off" onclick="choose()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnamt1" >Concession</label>
 
                                             <input type="radio" class="btn-check" name="amount" id="btnamt2"
-                                                value="Full Cost" autocomplete="off">
+                                                value="Full Cost" autocomplete="off" onclick="choose()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnamt2" >Full Cost</label>
                                        
                                         </div>
@@ -70,7 +70,7 @@
                          </div>
                          <div class="col">
                               <div class="d-flex justify-content-center mt-2 mb-2"> 
-                                         <button type="button" class="btn btn-success mt-4 " area-label="pathivu sei" onclick="sub()" aria-labelledby="sb">Submit</button>
+                                         <button type="button" class="btn btn-success mt-4 " aria-labelledby="sb" onclick="sub()">Submit</button>
                                          <span class="d-none" id="sb">click on this button to submit the request to helpers</span>
                               </div>
                          </div>
