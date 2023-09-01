@@ -75,19 +75,19 @@
 <!--                                         <span class="d-none" aria-hidden="true" id="gen">Please select Anyone Gender from Radio Button</span> -->
                                         <div class="btn-group mt-2" name="gender">
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype1"
-                                                 value="Male"  aria-label="selected gender male" onclick="choosegen()">
+                                                 value="Male"  autocomplete="off" aria-label="selected gender male" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype1" >Male</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype2"
-                                                value="Female"  aria-label="selected gender female" onclick="choosegen()">
+                                                value="Female"  autocomplete="off" aria-label="selected gender female" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype2" >Female</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype3"
-                                                value="TransGender"   aria-label="selected gender transgender" onclick="choosegen()">
+                                                value="TransGender"  autocomplete="off"  aria-label="selected gender transgender" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype3" >Trans<br>Gender</label>
                                             
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype4"
-                                                value="Choose Not To Say"  aria-label="selected Not to say" onclick="choosegen()">
+                                                value="Choose Not To Say" autocomplete="off"  aria-label="selected Not to say" onclick="choosegen()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype4" >Not<br>To Say</label>
                                         </div>
                                         <div class="mt-2">
@@ -115,20 +115,20 @@
                                         <label class="form-label mt-2 fw-semibold" area-label="kuraipaadu vagai">Disability Type</label><br>
                                         <div class="btn-group mt-2" name="child">
                                             <input type="radio" class="btn-check" name="child" id="radio1"
-                                                 value="From Birth" area-label="siruvaiyathil irunthu" onclick="choosechi()">
+                                                 value="From Birth" autocomplete="off" area-label="siruvaiyathil irunthu" onclick="choosechi()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="radio1" >From Birth</label>
 
                                             <input type="radio" class="btn-check" name="child"  id="radio2"
-                                                value="Acquired Disability" area-label="pathin paruvam" onclick="choosechi()">
+                                                value="Acquired Disability" autocomplete="off" area-label="pathin paruvam" onclick="choosechi()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="radio2" >Acquired Disability</label>
 
                                             <input type="radio" class="btn-check" name="child" id="radio3"
-                                                value="Recently" area-label="samibathil" onclick="choosechi()">
+                                                value="Recently" autocomplete="off" area-label="samibathil" onclick="choosechi()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="radio3" >Recently</label>
                                         </div>
                                         <div class="formper mt-2">
                                             <label class="form-label fw-semibold" for="form1" area-label="kuraipaadu sathavitham">Disability Percentage</label>
-                                            <input type="text" id="form1" name="per" class="col-2 form-control " max="100"
+                                            <input type="text" id="form1" name="per" class="col-2 form-control " maxlength="3"
                                                    accuracy="2" style="width:45%" placeholder="Enter Disability Percentage *" aria-required="true"/>
                                         </div>
                                         <div class="address mt-1">
@@ -171,25 +171,25 @@
                                     <span class="d-none" aria-hidden="true">Please Select any one type of request</span>
                                         <div class="btn-group mt-2" name="requesttype">
                                             <input type="radio" class="btn-check" name="requesttype" id="type1"
-                                                 value="Goods" area-label="siruvaiyathil irunthu"  onclick="choosereq()">
+                                                 value="Goods" autocomplete="off" area-label="siruvaiyathil irunthu"  onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type1" >Goods</label>
 
                                             <input type="radio" class="btn-check" name="requesttype"  id="type2"
-                                                value="Services" area-label="pathin paruvam" onclick="choosereq()">
+                                                value="Services" autocomplete="off" area-label="pathin paruvam" onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type2" >Services</label>
 
                                             <input type="radio" class="btn-check" name="requesttype" id="type3"
-                                                value="Guidance"  area-label="samibathil" onclick="choosereq()">
+                                                value="Guidance" autocomplete="off"  area-label="samibathil" onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type3"> Guidance</label>
                                             <input type="radio" class="btn-check" name="requesttype" id="type4"
-                                                value="All" area-label="samibathil" onclick="choosereq()">
+                                                value="All" autocomplete="off"  area-label="samibathil" onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type4" >All</label>
                                         </div><br>
                                     <label class="form-label mt-2 fw-semibold" >Select Your Profession</label>
                                              <div class="mt-2 row p-1" role="radiogroup" aria-labelledby="genrd">
                                             <span class="d-none" aria-hidden="true" id="genrd">Please select Anyone Gender from Radio Button</span>
                                             <input type="radio" class="btn-check" name="profession" id="pro1" autocomplete="off"
-                                                 value="Government" area-label="aan" onclick="choosepro()">
+                                                 value="Government"  onclick="choosepro()">
                                             <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1 " for="pro1" aria-hidden="true">Government</label>
 
                                             <input type="radio" class="btn-check" name="profession" id="pro2" autocomplete="off"
@@ -258,7 +258,7 @@
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/102/102643.png" class="input-group-text" width="48px" alt=""> 
                                                 <input type="password" id="passpin" class="form-control" name="logpin"
-                                                placeholder="Enter 4 Digit PIN"  aria-required="true" />
+                                                placeholder="Enter 4 Digit PIN *"  aria-required="true" />
                                                 
                                             </div>
                                            
