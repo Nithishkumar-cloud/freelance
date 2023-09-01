@@ -18,6 +18,7 @@ async function sub(){
         sesid:localStorage.getItem('sessionid'),
         sub:document.getElementById('reqval').value,
         //cost:document.querySelector('input[name="amount"]:checked').value,
+        at,
         des:document.getElementById('des').value,
         longdes:document.getElementById('longdes').value
     };
