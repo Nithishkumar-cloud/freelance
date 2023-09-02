@@ -11,4 +11,6 @@
                 flex-direction: column;
               }
             }
-
+            .cen{
+                margin-top: 200px;
+            }
