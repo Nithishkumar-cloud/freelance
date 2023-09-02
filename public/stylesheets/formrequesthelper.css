@@ -1,3 +1,25 @@
 
 margin-top:70px;
 border-color:linear-gradient(to left, #cfd9df 30%, #e2ebf0 74%);
+
+         .bg{
+                background:linear-gradient(to left, #abe9cd 30%, #3eadcf 74%);
+        }
+        .siz{
+           margin-top: 170px;
+          }
+            .navbar-toggler{
+                border:2px solid red;
+            }
+            .navbar-toggler-icon{
+                background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+       @media all and (max-width: 568px){
+              .abc{
+                  display:flex;
+                flex-direction: column;
+              }
+            }
+           
+
+
