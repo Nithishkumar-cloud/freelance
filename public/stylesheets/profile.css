@@ -7,4 +7,10 @@
         .sha {
             box-shadow: 8px 6px 10px rgba(168, 43, 168, 0.3);
         }
-   
+
+ @media only screen and (max-width: 412px){
+              .abc{
+                  display:flex;
+                flex-direction: column;
+              }
+            }
