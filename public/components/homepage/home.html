@@ -8,11 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" >
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
+    <link rel="stylesheet" type="text/css" href="../stylesheets/home.css">
     </head>
     <body>
        <section class="bg-light">
-          <ul class="nav nav-pills justify-content-center p-3">
+<!--           <ul class="nav nav-pills justify-content-center p-3">
            <li class="nav-item px-3">
             <button type="button" class="nav-link active" data-bs-toggle="pill" onclick="Profile()">Profile</button> 
            </li>
@@ -22,7 +22,24 @@
            <li class="nav-item px-3">
             <button type="button" class="nav-link" data-bs-toggle="pill" onclick="logout()">Logout</button>
            </li>
-          </ul>
+          </ul> -->
+           <nav class="navbar navbar-expand-lg bg-light">
+                <a href="" class="navbar-brand"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#colla"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="colla">
+                     <ul class="nav nav-pills  p-3 ">
+                            <li class="nav-item px-3">
+                                <button type="button" class="nav-link active" data-bs-toggle="pill" onclick="Profile()">Profile</button> 
+                            </li>
+                            <li class="nav-item px-3">
+                                <button type="button" class="nav-link " data-bs-toggle="pill" onclick="location.assign('/requestlist')">Requests</button> 
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="nav-link" data-bs-toggle="pill" onclick="logout()">Logout</button>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
        </section>
        <section>
         <div class="d-flex justify-content-center p-4 text-dark fs-4" >Request Type</div>
