@@ -16,8 +16,8 @@
 </head>
 
 <body>
-     <section class="bg-light">
-        <ul class="nav nav-pills justify-content-end p-3 ">
+     <section class="bg-light fixed-top">
+<!--         <ul class="nav nav-pills justify-content-end p-3 ">
            
             <li class="nav-item px-3" >
                 <button class="nav-link active" type="button" data-bs-toggle="pill" area-label="suya vivaram ariya">Profile</button>
@@ -29,7 +29,24 @@
                 <button class="nav-link " type="button" data-bs-toggle="pill" area-label="veliyera" onclick="logout()">Logout</button>
             </li>
             
-        </ul>
+        </ul> -->
+         <nav class="navbar navbar-expand-lg bg-light p-3">
+                <a href="" class="navbar-brand"></a>
+                <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#colla" style="font-size:15px"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="colla">
+                     <ul class="nav nav-pills p-2 d-flex flex-sm-column flex-lg-row align-items-center abc">
+                            <li class="nav-item p-2">
+                                <button type="button" class="nav-link active" data-bs-toggle="pill">Profile</button> 
+                            </li>
+                            <li class="nav-item p-2">
+                                <button type="button" class="nav-link " data-bs-toggle="pill" onclick="location.assign('/requestlist')">Requests</button> 
+                            </li>
+                            <li class="nav-item p-2">
+                                <button type="button" class="nav-link" data-bs-toggle="pill" onclick="logout()">Logout</button>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
 
     </section>
     <section class="bg2 vh-100 d-flex justify-content-center">
