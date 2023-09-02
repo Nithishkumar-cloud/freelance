@@ -1,4 +1,9 @@
-
+         .bg{
+                background:linear-gradient(to left, #abe9cd 30%, #3eadcf 74%);
+        }
+        .siz{
+           margin-top: 170px;
+          }
             .navbar-toggler{
                 border:2px solid red;
             }
