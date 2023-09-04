@@ -22,10 +22,10 @@
         <ul class="nav nav-pills justify-content-center p-3 ">
           
           <li class="nav-item px-2">
-              <button class="nav-link active" type="button" data-bs-toggle="pill" onclick="register()">Register</button>
+              <button class="nav-link active fw-semibold" type="button" data-bs-toggle="pill" onclick="register()">Register</button>
           </li>
           <li class="nav-item px-2" >
-              <button class="nav-link" type="button" data-bs-toggle="pill"  onclick="login()">Login</button>
+              <button class="nav-link fw-semibold" type="button" data-bs-toggle="pill"  onclick="login()">Login</button>
           </li>
         
         </ul>
@@ -56,11 +56,11 @@
 <!--             <input type="radio" class="btn-check" name="request" id="btnradio1"
                  value="Helpus" area-label="uthavi perubavar" checked>
             <label class="btn btn-outline-primary rounded rounded-pill m-1" for="btnradio1"  onclick="location.assign('/')"><img src="https://cdn-icons-png.flaticon.com/512/3208/3208348.png" width="25px" height="25px" alt="Helping hand" aria-hidden="true">Help us</label> -->
-           <button type="button" class=" btn btn-outline-primary rounded rounded-pill m-1 active"  onclick="location.assign('/')"><img src="https://cdn-icons-png.flaticon.com/512/3208/3208348.png" width="25px" height="25px" alt="If You Are a Person With Disability Choose">HelpUs</button> 
+           <button type="button" class=" btn btn-outline-primary rounded rounded-pill m-1 fw-semibold text-white active"  id="ac" onclick="location.assign('/')"><img src="https://cdn-icons-png.flaticon.com/512/3208/3208348.png" width="25px" height="25px" alt="If You Are a Person With Disability Choose">HelpUs</button> 
 <!--             <input type="radio" class="btn-check" name="request" id="btnradio2"
                 value="Helpers" area-label="uthavubavar">
             <label class="btn btn-outline-primary  rounded rounded-pill m-1" for="btnradio2" area-label="uthavubavar" onclick="location.assign('/helper')"><img src="https://cdn-icons-png.flaticon.com/512/4729/4729491.png" width="25px" height="25px" alt="Helping hand" aria-hidden="true">Helpers</label> -->
-            <button type="button" class=" btn btn-outline-primary rounded rounded-pill m-1 "  onclick="location.assign('/helper')"><img src="https://cdn-icons-png.flaticon.com/512/4729/4729491.png" width="25px" height="25px" alt="If You Are a Volunteer Choose">Helpers</button>
+            <button type="button" class=" btn btn-outline-primary rounded rounded-pill fw-semibold text-white m-1 "  id="ac" onclick="location.assign('/helper')"><img src="https://cdn-icons-png.flaticon.com/512/4729/4729491.png" width="25px" height="25px" alt="If You Are a Volunteer Choose">Helpers</button>
 
         </div>
     </div>
@@ -91,19 +91,19 @@
                                         <div class="btn-group mt-2" name="gender">
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype1"
                                                  value="Male"  autocomplete="off" aria-label="selected gender male" onclick="choosegen()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype1" >Male</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype1" id="bo">Male</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype2"
                                                 value="Female"  autocomplete="off" aria-label="selected gender female" onclick="choosegen()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype2" >Female</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype2" id="bo">Female</label>
 
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype3"
                                                 value="TransGender"  autocomplete="off"  aria-label="selected gender transgender" onclick="choosegen()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype3" >Trans<br>Gender</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype3" id="bo">Trans<br>Gender</label>
                                             
                                             <input type="radio" class="btn-check" name="gender" id="btnradiotype4"
                                                 value="Choose Not To Say" autocomplete="off"  aria-label="selected Not to say" onclick="choosegen()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype4" >Not<br>To Say</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="btnradiotype4" id="bo">Not<br>To Say</label>
                                         </div>
                                         <div class="mt-2">
                                              <label class="form-label fw-semibold" for="formphone">Phone Number</label>
@@ -131,15 +131,15 @@
                                         <div class="btn-group mt-2" name="child">
                                             <input type="radio" class="btn-check" name="child" id="radio1"
                                                  value="From Birth" autocomplete="off" area-label="siruvaiyathil irunthu" onclick="choosechi()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="radio1" >From Birth</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="radio1" id="bo">From Birth</label>
 
                                             <input type="radio" class="btn-check" name="child"  id="radio2"
                                                 value="Acquired Disability" autocomplete="off" area-label="pathin paruvam" onclick="choosechi()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="radio2" >Acquired Disability</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="radio2" id="bo">Acquired Disability</label>
 
                                             <input type="radio" class="btn-check" name="child" id="radio3"
                                                 value="Recently" autocomplete="off" area-label="samibathil" onclick="choosechi()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="radio3" >Recently</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="radio3" id="bo">Recently</label>
                                         </div>
                                         <div class="formper mt-2">
                                             <label class="form-label fw-semibold" for="form1" area-label="kuraipaadu sathavitham">Disability Percentage</label>
@@ -191,40 +191,40 @@
                                         <div class="btn-group mt-2" name="requesttype">
                                             <input type="radio" class="btn-check" name="requesttype" id="type1"
                                                  value="Goods" autocomplete="off" area-label="siruvaiyathil irunthu"  onclick="choosereq()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="type1" >Goods</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="type1" id="bo">Goods</label>
 
                                             <input type="radio" class="btn-check" name="requesttype"  id="type2"
                                                 value="Services" autocomplete="off" area-label="pathin paruvam" onclick="choosereq()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="type2" >Services</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="type2" id="bo">Services</label>
 
                                             <input type="radio" class="btn-check" name="requesttype" id="type3"
                                                 value="Guidance" autocomplete="off"  area-label="samibathil" onclick="choosereq()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="type3"> Guidance</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="type3"  id="bo">Guidance</label>
                                             <input type="radio" class="btn-check" name="requesttype" id="type4"
                                                 value="All" autocomplete="off"  area-label="samibathil" onclick="choosereq()">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="type4" >All</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="type4" id="bo">All</label>
                                         </div><br>
                                     <label class="form-label mt-2 fw-semibold" >Select Your Profession</label>
                                              <div class="mt-2 row p-1" role="radiogroup" aria-labelledby="genrd">
                                             <span class="d-none" aria-hidden="true" id="genrd">Please select Anyone Gender from Radio Button</span>
                                             <input type="radio" class="btn-check" name="profession" id="pro1" autocomplete="off"
                                                  value="Government"  onclick="choosepro()">
-                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1 " for="pro1" >Government</label>
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1 " for="pro1" id="bo">Government</label>
 
                                             <input type="radio" class="btn-check" name="profession" id="pro2" autocomplete="off"
                                                 value="Private"  onclick="choosepro()">
-                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro2" >Private</label>
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro2" id="bo">Private</label>
 
                                             <input type="radio" class="btn-check" name="profession" id="pro3" autocomplete="off"
                                                 value="Selfemployed"  onclick="choosepro()">
-                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro3" >Selfemployed</label>
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro3" id="bo">Selfemployed</label>
                                             
                                             <input type="radio" class="btn-check" name="profession" id="pro4" autocomplete="off"
                                                 value="Unemployed"  onclick="choosepro()">
-                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro4" >Unemployed</label>
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro4" id="bo">Unemployed</label>
                                             <input type="radio" class="btn-check" name="profession" id="pro5" autocomplete="off"
                                                 value="Student"  onclick="choosepro()">
-                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro5">Student</label>
+                                            <label class="btn btn-outline-primary d-flex col-auto align-items-center m-1" for="pro5" id="bo">Student</label>
                                         </div>
 
                                     <div class="discer mt-2">
@@ -253,7 +253,7 @@
                                     <div class="d-flex justify-content-center mt-3">
                                         <!-- <input type="submit" id="submitDetails" name="submitDetails" class="btn btn-primary p-3 sha1 fw-semibold" value="Register" /> -->
                                          
-                                         <button type="button" class="btn btn-success mt-4 sha1" area-label="pathivu sei" onclick="register1()">Register</button>
+                                         <button type="button" class="btn btn-success mt-4 sha1" id="btcol" onclick="register1()">Register</button>
                                     </div>
                                 </form>
                                </div>
@@ -284,7 +284,7 @@
                                         </div>
                                         <p id="err" class="text-danger fs-bold p-1"></p>
                                         <div class="d-flex justify-content-center" >
-                                             <button type="button" class="btn btn-success mt-4 sha1"  onclick="login1()">Login</button>
+                                             <button type="button" class="btn btn-success mt-4 sha1" id="btcol" onclick="login1()">Login</button>
                                            
                                         </div>
                                         
