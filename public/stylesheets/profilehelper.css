@@ -1,10 +1,14 @@
-        .bg2 {
-            background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-           }
+         .bg2 {
+            background: linear-gradient(to bottom,rgb(80,35,217) 11.2%, rgb(217,35,189) 91.1%);
+            margin-top: 75px;
+        }
 
           .sha 
             {
             box-shadow: 8px 6px 10px rgba(168, 43, 168, 0.3);
+            }
+          .colo{
+            color: blue;
             }
             .navbar-toggler
             {
@@ -14,9 +18,13 @@
             {
                 background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
             }
-            .cen{
-                margin-top:100px;   
-           }
+            .bor{
+           
+            box-shadow: 2px 9px 42px #0000bf;
+            position:relative; 
+          /*transform: translateY(-60px);*/
+          z-index:4;
+        }
 
  @media all and (max-width: 568px){
               .abc{
@@ -24,3 +32,6 @@
                 flex-direction: column;
               }
             }
+      .val{
+            transform: translateY(-50px);
+        }
