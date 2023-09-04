@@ -50,11 +50,11 @@
 <!--             <input type="radio" class="btn-check" name="request" id="helpus"
                  value="Helpus" required >
                  <label class="btn btn-outline-primary rounded rounded-pill m-1" for="btnradio1" area-label="uthavi perubavar" onclick="location.assign('/')"><img src="https://cdn-icons-png.flaticon.com/512/3208/3208348.png" width="25px" height="25px" alt="Helping hand">Help us</label> -->
-<button type="button" class=" btn btn-outline-primary rounded rounded-pill m-1 "  area-label="suya vivaram ariya" onclick="location.assign('/')"><img src="https://cdn-icons-png.flaticon.com/512/3208/3208348.png" width="25px" height="25px" alt="If You Are a Person With Disability Choose">HelpUs</button> 
+<button type="button" class=" btn btn-outline-primary rounded rounded-pill m-1 "  id="ac" onclick="location.assign('/')"><img src="https://cdn-icons-png.flaticon.com/512/3208/3208348.png" width="25px" height="25px" alt="If You Are a Person With Disability Choose">HelpUs</button> 
 <!--             <input type="radio" class="btn-check" name="request" id="helpers"
                 value="Helpers" required checked>
                 <label class="btn btn-outline-primary  rounded rounded-pill m-1" for="btnradio2" area-label="uthavubavar" onclick="location.assign('/helper')"><img src="https://cdn-icons-png.flaticon.com/512/4729/4729491.png" width="25px" height="25px" alt="Helping hand">Helpers</label> -->
-            <button type="button" class=" btn btn-outline-primary rounded rounded-pill m-1 active"  area-label="suya vivaram ariya" onclick="location.assign('/helper')"><img src="https://cdn-icons-png.flaticon.com/512/4729/4729491.png" width="25px" height="25px" alt="If You Are a Volunteer Choose">Helpers</button>
+            <button type="button" class=" btn btn-outline-primary rounded rounded-pill m-1 active"  id="ac" onclick="location.assign('/helper')"><img src="https://cdn-icons-png.flaticon.com/512/4729/4729491.png" width="25px" height="25px" alt="If You Are a Volunteer Choose">Helpers</button>
         </div>
     </div>
 </div>
@@ -82,18 +82,18 @@
                                         aria-label="Basic radio toggle button group">
                                         <input type="radio" class="btn-check" name="gender" value="male" id="btnradio1"
                                             autocomplete="off">
-                                        <label class="btn btn-outline-primary d-flex align-items-center" for="btnradio1" area-label="aan">Male</label>
+                                        <label class="btn btn-outline-primary d-flex align-items-center" for="btnradio1" id="bo">Male</label>
 
                                         <input type="radio" class="btn-check" name="gender"  value=female id="btnradio2"
                                             autocomplete="off">
-                                        <label class="btn btn-outline-primary d-flex align-items-center" for="btnradio2" area-label="pen">Female</label>
+                                        <label class="btn btn-outline-primary d-flex align-items-center" for="btnradio2" id="bo">Female</label>
 
                                         <input type="radio" class="btn-check" name="gender" id="btnradio3"
                                             autocomplete="off"  value="transGender">
-                                        <label class="btn btn-outline-primary d-flex align-items-center" for="btnradio3" area-label="maatru paalinam">Trans<br>Gender</label>
+                                        <label class="btn btn-outline-primary d-flex align-items-center" for="btnradio3" id="bo">Trans<br>Gender</label>
                                          <input type="radio" class="btn-check" name="gender" id="btnradio4"
                                             autocomplete="off"  value="Choose Not To Say">
-                                        <label class="btn btn-outline-primary d-flex align-items-center" for="btnradio4" area-label="maatru paalinam">Choose Not <br>To Say</label>
+                                        <label class="btn btn-outline-primary d-flex align-items-center" for="btnradio4" id="bo">Not <br>To Say</label>
                                       
                                     </div>
                                     <div class="formno mt-2">
@@ -125,7 +125,7 @@
                                         <div class="btn-group">
                                         <input type="radio" class="btn-check " name="id" value="VoterID" id="voter"
                                             autocomplete="off"  required>
-                                        <label class="btn btn-outline-primary d-flex align-items-center" for="voter" area-label="voterid"  data-bs-toggle="modal" data-bs-target="#modvot">Voter<br>ID</label>
+                                        <label class="btn btn-outline-primary d-flex align-items-center" for="voter" id="bo"  data-bs-toggle="modal" data-bs-target="#modvot">Voter<br>ID</label>
                                         <div class="modal" id="modvot">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -144,7 +144,7 @@
                                         </div>
                                         <input type="radio" class="btn-check " name="id" value="DrivingLicence" id="dl"
                                             autocomplete="off"  required>
-                                        <label class="btn btn-outline-primary d-flex align-items-center" for="dl" area-label="drivinglicence" data-bs-target="#moddl" data-bs-toggle="modal">Driving Licence</label>
+                                        <label class="btn btn-outline-primary d-flex align-items-center" for="dl" id="bo" data-bs-target="#moddl" data-bs-toggle="modal">Driving Licence</label>
                                         <div class="modal" id="moddl">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -163,7 +163,7 @@
                                         </div>
                                         <input type="radio" class="btn-check " name="id" value="VoterID" id="ac"
                                             autocomplete="off"  required>
-                                        <label class="btn btn-outline-primary d-flex align-items-center" for="ac" area-label="pancardnumber" data-bs-target="#modac" data-bs-toggle="modal">Aadhar<br>Card</label>
+                                        <label class="btn btn-outline-primary d-flex align-items-center" for="ac" id="bo" data-bs-target="#modac" data-bs-toggle="modal">Aadhar<br>Card</label>
                                         <div class="modal" id="modac">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -182,7 +182,7 @@
                                         </div>
                                         <input type="radio" class="btn-check " name="id" value="PanID" id="pn"
                                             autocomplete="off"  required>
-                                        <label class="btn btn-outline-primary d-flex align-items-center" for="pn" area-label="voterid" data-bs-toggle="modal" data-bs-target="#modpan">PAN ID</label>
+                                        <label class="btn btn-outline-primary d-flex align-items-center" for="pn" id="bo" data-bs-toggle="modal" data-bs-target="#modpan">PAN ID</label>
                                         <div class="modal" id="modpan">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -205,18 +205,18 @@
                                         <div class="btn-group mt-2" name="requesttypehelp">
                                             <input type="radio" class="btn-check " name="requesttypehelp" id="typehelp1"
                                                  value="Goods" area-label="siruvaiyathil irunthu">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="typehelp1" >Goods</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="typehelp1" id="bo">Goods</label>
 
                                             <input type="radio" class="btn-check" name="requesttypehelp"  id="typehelp2"
                                                 value="Services" area-label="pathin paruvam">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="typehelp2" >Services</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="typehelp2" id="bo">Services</label>
 
                                             <input type="radio" class="btn-check" name="requesttypehelp" id="typehelp3"
                                                 value="Guidance"  area-label="samibathil">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="typehelp3"> Guidance</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="typehelp3" id="bo">Guidance</label>
                                             <input type="radio" class="btn-check" name="requesttypehelp" id="typehelp4"
                                                 value="All" area-label="samibathil">
-                                            <label class="btn btn-outline-primary d-flex align-items-center" for="typehelp4" >All</label>
+                                            <label class="btn btn-outline-primary d-flex align-items-center" for="typehelp4" id="bo">All</label>
                                         </div><br>
                                     <div class="mt-2">
                                         <label class="form-label fw-semibold" for="pincode" area-label="anjal kuriyidu" >Pincode</label>
@@ -240,7 +240,7 @@
                                     <p id="err"></p>
                                     <div class="d-flex justify-content-center">
                                      
-                                        <button type="button" class="btn btn-success mt-4 " area-label="pathivu sei" onclick="register2()">Register</button>
+                                        <button type="button" class="btn  mt-4 " id="btcol" onclick="register2()">Register</button>
                                     </div>
                                     </form>
                             </div>
@@ -269,7 +269,7 @@
                                 <p id="errhelp" class="text-danger fs-bold"></p>
                                 <div class="d-flex justify-content-center">
                                     <!-- <input type="submit" id="submit" name="submit" class="btn btn-primary mt-4 sha1" value="Login" /> -->
-                                    <button type="button" onclick="login2()" class="btn btn-success mt-4 sha" area-label="nulaivu" >Login</button>
+                                    <button type="button" onclick="login2()" class="btn  mt-4 sha" id="btcol" >Login</button>
                                    
                                 </div>
                                 </form>
