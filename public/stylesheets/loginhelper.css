@@ -1,11 +1,6 @@
 
         
-  .backimg{
-    background:url("../../images/lecture-college.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  
 
   .bg{
     background:linear-gradient(to left, #abe9cd 30%, #3eadcf 74%);
@@ -34,4 +29,16 @@
   }
   .siz{
     margin-top: 75px;
+}
+#ac{
+    border:1px solid white;
+}
+#btcol{
+    background-color: #FC466B;
+    color:white;
+    font-weight: bold;
+}
+#bo{
+    border:2px solid blue;
+    color:black;
 }
