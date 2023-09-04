@@ -1,5 +1,6 @@
          .bg{
-                background:linear-gradient(to left, #abe9cd 30%, #3eadcf 74%);
+/*                 background:linear-gradient(to left, #abe9cd 30%, #3eadcf 74%); */
+                  background:linear-gradient(to left, #FC466B 0%, #3F5EFB 100%);
         }
         .siz{
            margin-top: 170px;
