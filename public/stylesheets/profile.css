@@ -2,6 +2,7 @@
         .bg2 {
 /*             background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
             background: linear-gradient(to bottom,rgb(80,35,217) 11.2%, rgb(217,35,189) 91.1%);
+                margin-top:75px;
         }
 
         .sha {
@@ -13,9 +14,7 @@
             .navbar-toggler-icon{
                 background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='blue' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
             }
-         .cen{
-           margin-top:70px;   
-        }
+        
 
        @media all and (max-width: 568px){
               .abc{
