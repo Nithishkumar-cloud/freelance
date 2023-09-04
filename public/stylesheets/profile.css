@@ -17,11 +17,26 @@
            margin-top:70px;   
         }
 
- @media all and (max-width: 568px){
+       @media all and (max-width: 568px){
               .abc{
                   display:flex;
                 flex-direction: column;
               }
             }
+        .colo{
+            color: blue;
+          }
+       .bor{
+           
+            box-shadow: 2px 9px 42px #0000bf;
+            position:relative; 
+          /*transform: translateY(-60px);*/
+          z-index:4;
+        }
+      .val{
+            transform: translateY(-50px);
+        }
+
+   
     
 
