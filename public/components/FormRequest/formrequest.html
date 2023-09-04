@@ -27,11 +27,11 @@
                 <div class="collapse navbar-collapse justify-content-end" id="colla">
                      <ul class="nav nav-pills p-2 d-flex flex-sm-column flex-lg-row align-items-center abc">
                             <li class="nav-item p-2">
-                                <button type="button" class="nav-link active" data-bs-toggle="pill" onclick="location.assign('/profile)">Profile</button> 
+                                <button type="button" class="nav-link active fw-semibold" data-bs-toggle="pill" onclick="location.assign('/profile)">Profile</button> 
                             </li>
                             
                             <li class="nav-item p-2">
-                                <button type="button" class="nav-link" data-bs-toggle="pill" onclick="logout()">Logout</button>
+                                <button type="button" class="nav-link fw-semibold" data-bs-toggle="pill" onclick="logout()">Logout</button>
                             </li>
                         </ul>
                 </div>
@@ -41,7 +41,7 @@
          <div class="row m-0">
              <div class="col">
                  <form method="POST" action="">
-                     <div class="row m-3 bg-light rounded rounded-4 d-flex flex-column">
+                     <div class="row m-3 bg-light rounded rounded-5 d-flex flex-column">
                          <div class="col">
                              <div class="text-center text-uppercase fw-bold fs-4 m-1">Request</div>
                              <div class="mt-2">
@@ -80,10 +80,10 @@
                                      <textarea id="longdes" name="area" class="col-2 form-control" ></textarea>
                                </div>
                          </div>
-                         <p class="text-danger fw-semibold" id="errreq"></p>
+                         <span class="text-danger fw-bold" id="errreq"></span>
                          <div class="col">
                               <div class="d-flex justify-content-center mt-2 mb-2"> 
-                                         <button type="button" class="btn btn-success mt-4 " aria-labelledby="sb" onclick="sub()">Submit</button>
+                                         <button type="button" class="btn mt-4 " id="btcol" onclick="sub()">Submit</button>
                                          <span class="d-none" id="sb">click on this button to submit the request to helpers</span>
                               </div>
                          </div>
