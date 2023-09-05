@@ -6,7 +6,7 @@ let gnd = "";
 
 
 window.onload = function load() {
-        register();
+        login();
     };
 
 function che(){
