@@ -123,8 +123,8 @@
         }
     }
           function errordisplay(value){
-              document.getElementById('errhelp').style.display="block";
-               document.getElementById('errhelp').innerHTML=value;
+              document.getElementById('err').style.display="block";
+               document.getElementById('err').innerHTML=value;
              
                 // let speech = new SpeechSynthesisUtterance(value);
                 // //  speech.lang = 'ta-IN';
@@ -134,7 +134,7 @@
 //                 speechSynthesis.speak(speech1);
                  console.log("work");
                  const timeout=setTimeout(()=>{
-                     document.getElementById("errhelp").style.display="none";
+                     document.getElementById("err").style.display="none";
                  },5000);      
               
           }
