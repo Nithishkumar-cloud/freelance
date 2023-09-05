@@ -64,6 +64,10 @@ const Name = req.body.data.a;
     RequestType,
     Pin
   });
+     const token=jwt.sign({id: user.id},process.env.JWT_SECRET,{
+          expiresIn:process.env.JWT_EXPIRES_TIME
+       });
+       console.log(token);
   const objectid=user.id;
   console.log(objectid);
   const sessionId= crypto.randomBytes(3).toString('hex');
@@ -74,7 +78,7 @@ const Name = req.body.data.a;
        Phone
   });
 console.log(user);
-res.json({user,ids,regmsg:"Registered successfully"});
+res.json({user,ids,token,regmsg:"Registered successfully"});
 
 };
 
@@ -174,6 +178,10 @@ exports.registeruserhelper=async(req,res,next)=>{
     PersonalId,
     RequestTypeHelp
   });
+     const token=jwt.sign({id: user.id},process.env.JWT_SECRET,{
+          expiresIn:process.env.JWT_EXPIRES_TIME
+       });
+       console.log(token);
   const objectid=user.id;
   console.log(objectid);
   const sessionIdHelper= crypto.randomBytes(4).toString('hex');
@@ -184,7 +192,7 @@ exports.registeruserhelper=async(req,res,next)=>{
        Phone
   });
 
-res.json({user,ids});
+res.json({user,ids,token,regsuc:"Registered Successfully"});
 };
 
 
