@@ -4,7 +4,7 @@
   let id="";
 
         window.onload = function load() {
-            register();
+            login();
         };
 
         function login() {
