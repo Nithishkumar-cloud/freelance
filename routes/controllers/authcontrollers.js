@@ -152,12 +152,12 @@ exports.registeruserhelper=async(req,res,next)=>{
   const Name = req.body.data.name;
   const Phone = req.body.data.phone;
   const Address = req.body.data.address;
-  const Gender = req.body.data.gender;
+  const Gender = req.body.data.ge;
   const Dateofbirth = req.body.data.dob;
   const Pin=req.body.data.pin;
   
   const PersonalId=req.body.data.type;
-  const RequestTypeHelp=req.body.data.requesttypehelp;
+  const RequestTypeHelp=req.body.data.reqtype;
   const Pincode=req.body.data.pincode;
   if (!(Name &&Phone&& Address&&Dateofbirth&&Pin&&PersonalId&&RequestTypeHelp) ) {
     //return next(new errorhandler('Please enter email password and name field',400));
