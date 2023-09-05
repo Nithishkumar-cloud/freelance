@@ -124,7 +124,7 @@
                                         <label class="form-label fw-semibold" for="" area-label="">Choose Anyone ID *</label><br>
                                         <div class="btn-group">
                                         <input type="radio" class="btn-check " name="id" value="VoterID" id="voter"
-                                            autocomplete="off"  required>
+                                            autocomplete="off"  required onclick="chooseid()">
                                         <label class="btn btn-outline-primary d-flex align-items-center" for="voter" id="bo"  data-bs-toggle="modal" data-bs-target="#modvot">Voter<br>ID</label>
                                         <div class="modal" id="modvot">
                                             <div class="modal-dialog">
@@ -143,7 +143,7 @@
                                             </div>
                                         </div>
                                         <input type="radio" class="btn-check " name="id" value="DrivingLicence" id="dl"
-                                            autocomplete="off"  required>
+                                            autocomplete="off"  required onclick="chooseid()">
                                         <label class="btn btn-outline-primary d-flex align-items-center" for="dl" id="bo" data-bs-target="#moddl" data-bs-toggle="modal">Driving Licence</label>
                                         <div class="modal" id="moddl">
                                             <div class="modal-dialog">
@@ -162,7 +162,7 @@
                                             </div>
                                         </div>
                                         <input type="radio" class="btn-check " name="id" value="VoterID" id="ac"
-                                            autocomplete="off"  required>
+                                            autocomplete="off"  required onclick="chooseid()">
                                         <label class="btn btn-outline-primary d-flex align-items-center" for="ac" id="bo" data-bs-target="#modac" data-bs-toggle="modal">Aadhar<br>Card</label>
                                         <div class="modal" id="modac">
                                             <div class="modal-dialog">
@@ -181,7 +181,7 @@
                                             </div>
                                         </div>
                                         <input type="radio" class="btn-check " name="id" value="PanID" id="pn"
-                                            autocomplete="off"  required>
+                                            autocomplete="off"  required onclick="chooseid()">
                                         <label class="btn btn-outline-primary d-flex align-items-center" for="pn" id="bo" data-bs-toggle="modal" data-bs-target="#modpan">PAN ID</label>
                                         <div class="modal" id="modpan">
                                             <div class="modal-dialog">
@@ -237,7 +237,7 @@
                                         
                                            
                                     </div>
-                                    <p id="err"></p>
+                                    <p id="err" class="fw-bold alert alert-danger mt-2"></p>
                                     <div class="d-flex justify-content-center">
                                      
                                         <button type="button" class="btn  mt-4 " id="btcol" onclick="register2()">Register</button>
@@ -258,7 +258,7 @@
                                     
                                 </div>
                                 <div class="mt-2">
-                                    <label class="form-label fw-semibold" for="pin" area-label="adaiyaalasol">PIN</label>
+                                    <label class="form-label fw-semibold" for="pin" >PIN</label>
                                     <div class="input-group">
                                         <img src="https://cdn-icons-png.flaticon.com/512/102/102643.png" class="input-group-text" width="48px" alt="">
                                         <input type="password" class="form-control" name="pin" id="pass"
@@ -266,10 +266,10 @@
                                     </div>
                                     
                                 </div>
-                                <p id="errhelp" class="text-danger fs-bold"></p>
+                                <p id="errhelp" class="fw-bold alert alert-danger mt-2"></p>
                                 <div class="d-flex justify-content-center">
                                     <!-- <input type="submit" id="submit" name="submit" class="btn btn-primary mt-4 sha1" value="Login" /> -->
-                                    <button type="button" onclick="login2()" class="btn  mt-4 sha" id="btcol" >Login</button>
+                                    <button type="button" onclick="login2()" class="btn  mt-3 sha" id="btcol" >Login</button>
                                    
                                 </div>
                                 </form>
