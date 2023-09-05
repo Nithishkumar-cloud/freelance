@@ -97,6 +97,7 @@
             },2000);
 
         }
+        }
 
         async function login2(){
             const details={
