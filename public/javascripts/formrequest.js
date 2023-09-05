@@ -3,7 +3,8 @@ const sessionid=localStorage.getItem('sessionid');
 window.onload=function(){
     let q=localStorage.getItem('requesttype');
      console.log(q);
-document.getElementById('reqval').value=q;
+    document.getElementById('reqval').value=q;
+    document.getElementById('errreq').style.display="none";
 };
 
 function choose(){
