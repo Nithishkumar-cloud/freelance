@@ -7,15 +7,15 @@
             login();
         };
 
-        function login() {
-            document.querySelector('.register').style.display='none ';
-            document.querySelector('.login').style.display='block ';
-           document.getElementById('errhelp').style.display="none";
+         function login() {
+            document.querySelector('.register').style.display='none';
+            document.querySelector('.login').style.display='block';
+            document.getElementById('errhelp').style.display="none";
         }
         function register(){
             document.querySelector('.register').style.display='block ';
             document.querySelector('.login').style.display='none';
-           document.getElementById('err').style.display="none";
+            document.getElementById('err').style.display="none";
         }
 
         function voterid(n){
