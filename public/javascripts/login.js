@@ -22,12 +22,14 @@ function che(){
         document.querySelector('.register').style.display='none ';
         document.querySelector('.register1').style.display='none ';
         document.querySelector('.log').style.display='block ';
+        document.getElementById('err').style.display='none';
     }
     function register(){
         
         document.querySelector('.register').style.display='block ';
         document.querySelector('.register1').style.display='block ';
         document.querySelector('.log').style.display='none';
+        document.getElementById('errreg').style.display='none';
     }
     function helpers(){
         location.assign('/helper');
