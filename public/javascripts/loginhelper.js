@@ -1,4 +1,7 @@
   let Type="";
+  let ge="";
+  let req="";
+  let id="";
 
         window.onload = function load() {
             register();
@@ -7,10 +10,12 @@
         function login() {
             document.querySelector('.register').style.display='none ';
             document.querySelector('.login').style.display='block ';
+           document.getElementById('errhelp').style.display="none";
         }
         function register(){
             document.querySelector('.register').style.display='block ';
             document.querySelector('.login').style.display='none';
+           document.getElementById('err').style.display="none";
         }
 
         function voterid(n){
@@ -20,6 +25,18 @@
            console.log(Type);
            
         }
+        function chooseid(){
+            id=document.querySelector('input[name="id"]:checked').value;
+            if(id===""){
+                errordisplay("Please Enter Your Id");
+            }
+        }
+        function choosege(){
+            ge=document.querySelector('input[name="gender"]:checked').value;
+        }
+        function choosere(){
+            req=document.querySelector('input[name="requesttypehelp"]:checked').value;
+        }
 
         async function register2(){
                    
@@ -27,23 +44,53 @@
                    name:document.getElementById('formname').value,
                    address:document.getElementById('add1').value,
                    phone:document.getElementById('formphone').value,
-                   gender:document.querySelector('input[name="gender"]:checked').value,
+                   ge,
                    dob:document.getElementById('dob').value,
                    pincode:document.getElementById('pincode').value,
                    pin:document.getElementById('pin').value,
-                   requesttypehelp:document.querySelector('input[name="requesttypehelp"]:checked').value,
-                   type:Type
+                   req,
+                   Type
                };
                console.log(detail.type);
-               if(name===""){
-                 errordisplay("Please enter your name");
+               if(detail.name===""){
+                 errordisplay("Please Enter Your Name");
+               }
+               else if(id===""){
+                   errordisplay("Please Enter Your Id");
+               }
+               else if(detail.ge===""){
+                   errordisplay("Please Enter Your Gender");
+               } 
+               else if(detail.address===""){
+                   errordisplay("Please Enter Your Address");
+               }
+               else if(detail.phone===""){
+                   errordisplay("Please Enter Your Phonenumber");
                }
                
-               
-               let a=await axios.post("https://attractive-pear-apron.cyclic.app/reghelper",{data:detail});
+               else if(detail.pin===""){
+                   errordisplay("Please Enter Your PIN");
+               }
+                else if(detail.dob===""){
+                   errordisplay("Please Enter Your DateofBirth");
+               }
+               else if(detail.pincode===""){
+                   errordisplay("Please Enter Your Pincode");
+               }
+               else if(detail.Type===""){
+                   errordisplay("Please Enter Your Id");
+               }
+               else if(detail.req===""){
+                   errordisplay("Please Enter Your RequestType");
+               }
+               else{
+                 let a=await axios.post("https://attractive-pear-apron.cyclic.app/reghelper",{data:detail});
                console.log(a.data);
                localStorage.setItem('sessionidhelper',a.data.ids.sessionIdHelper);
                location.assign("/formrequesthelper");
+               }
+               
+               
 
         }
 
@@ -53,10 +100,10 @@
                b:document.getElementById('pass').value
            };
            if(details.a===""){
-             errordisplay("Please Enter Your Number");
+             errordisplaylog("Please Enter Your Number");
         }
         else if(details.b===""){
-            errordisplay("Please Enter Your PIN");
+            errordisplaylog("Please Enter Your PIN");
         }
            else{
             var c=await axios.post("https://attractive-pear-apron.cyclic.app/loghelper",{data:details});
@@ -88,7 +135,19 @@
                  console.log("work");
                  const timeout=setTimeout(()=>{
                      document.getElementById("errhelp").style.display="none";
-                 },6000);      
+                 },5000);      
               
           }
+        function errordisplaylog(value){
+              document.getElementById('errhelp').style.display="block";
+               document.getElementById('errhelp').innerHTML=value;
+             
+               
+                 console.log("work");
+                 const timeout=setTimeout(()=>{
+                     document.getElementById("errhelp").style.display="none";
+                 },5000);      
+              
+          }
+        
         
