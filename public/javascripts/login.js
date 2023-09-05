@@ -143,11 +143,15 @@ function choosechi(){
                  console.log(q.data.regmsg);
                 let speech = new SpeechSynthesisUtterance(q.data.regmsg);
                  speechSynthesis.speak(speech);
-                 const timeout=setTimeout(()=>{
-            
-                         localStorage.setItem('sessionid', q.data.ids.sessionId);
-                         location.assign("/homepage");
-                 },3000);
+                const timeout=setTimeout(()=>{
+            let date = new Date();
+            let expDays = 2;
+            date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = ("token=" + q.data.token + ";" + expires);
+            localStorage.setItem('sessionid', q.data.ids.sessionId);
+            location.assign("/homepage");
+            },2000);
             
         }
       else{
