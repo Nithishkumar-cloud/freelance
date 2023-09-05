@@ -86,11 +86,15 @@
                else{
                  let a=await axios.post("https://attractive-pear-apron.cyclic.app/reghelper",{data:detail});
                console.log(a.data);
-               localStorage.setItem('sessionidhelper',a.data.ids.sessionIdHelper);
+                  const timeout=setTimeout(()=>{
+            let date = new Date();
+            let expDays = 2;
+            date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = ("token=" + a.data.token + ";" + expires);
+            localStorage.setItem('sessionidhelper',a.data.ids.sessionIdHelper);
                location.assign("/formrequesthelper");
-               }
-               
-               
+            },2000);
 
         }
 
