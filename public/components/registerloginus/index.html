@@ -127,7 +127,7 @@
                                             </div>
                                            
                                         </div>
-                                        <label class="form-label mt-2 fw-semibold" area-label="kuraipaadu vagai">Disability Type</label><br>
+                                        <label class="form-label mt-2 fw-semibold">Disability Type</label><br>
                                         <div class="btn-group mt-2" name="child">
                                             <input type="radio" class="btn-check" name="child" id="radio1"
                                                  value="From Birth" autocomplete="off" area-label="siruvaiyathil irunthu" onclick="choosechi()">
@@ -151,7 +151,8 @@
                                             <textarea id="add1" name="area" class="col-2 form-control"   autocomplete="off"aria-required="true" ></textarea>
                                         </div>
                                         <div class="form-check form-switch mt-2">
-                                           <input type="checkbox" class="form-check-input" id="ch" autocomplete="off" onclick="che()">
+                                           <input type="checkbox" class="form-check-input" id="ch" autocomplete="off" onclick="che()" aria-labelledby="ad">
+                                            <span id="ad" class="d-none" aria-hidden="true">check this  if your current Address is same as permanent Address</span>
                                            <label class="form-check-label" for="ch">Same as Permanent Address</label>
                                         </div>
                                         <div class=" mt-1">
@@ -190,22 +191,22 @@
                                     <span class="d-none" aria-hidden="true">Please Select any one type of request</span>
                                         <div class="btn-group mt-2" name="requesttype">
                                             <input type="radio" class="btn-check" name="requesttype" id="type1"
-                                                 value="Goods" autocomplete="off" area-label="siruvaiyathil irunthu"  onclick="choosereq()">
+                                                 value="Goods" autocomplete="off"   onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type1" id="bo">Goods</label>
 
                                             <input type="radio" class="btn-check" name="requesttype"  id="type2"
-                                                value="Services" autocomplete="off" area-label="pathin paruvam" onclick="choosereq()">
+                                                value="Services" autocomplete="off"  onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type2" id="bo">Services</label>
 
                                             <input type="radio" class="btn-check" name="requesttype" id="type3"
-                                                value="Guidance" autocomplete="off"  area-label="samibathil" onclick="choosereq()">
+                                                value="Guidance" autocomplete="off"   onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type3"  id="bo">Guidance</label>
                                             <input type="radio" class="btn-check" name="requesttype" id="type4"
-                                                value="All" autocomplete="off"  area-label="samibathil" onclick="choosereq()">
+                                                value="All" autocomplete="off"  onclick="choosereq()">
                                             <label class="btn btn-outline-primary d-flex align-items-center" for="type4" id="bo">All</label>
                                         </div><br>
                                     <label class="form-label mt-2 fw-semibold" >Select Your Profession</label>
-                                             <div class="mt-2 row p-1" role="radiogroup" aria-labelledby="genrd">
+                                             <div class="mt-2 row p-1" aria-labelledby="genrd">
                                             <span class="d-none" aria-hidden="true" id="genrd">Please select Anyone Gender from Radio Button</span>
                                             <input type="radio" class="btn-check" name="profession" id="pro1" autocomplete="off"
                                                  value="Government"  onclick="choosepro()">
@@ -244,7 +245,7 @@
                                         <label class="form-label fw-semibold" for="dob" area-label="adaiyaalasol">Create PIN</label>
                                         <div class="input-group">
                                             <img src="https://cdn-icons-png.flaticon.com/512/102/102643.png" class="input-group-text" width="48px" alt=""> 
-                                            <input type="password" class="form-control" name="pass" id="pass" aria-labelledby="etho" placeholder="Enter 4 Digit PIN" aria-required="true"/>
+                                            <input type="password" class="form-control" name="pass" id="pass" aria-labelledby="etho" placeholder="Enter 4 Digit PIN" maxlength="4" aria-required="true"/>
                                             <span id="etho" class="d-none" aria-hidden="true">This will be your login Pin</span>
                                         </div>
                                         
@@ -277,7 +278,7 @@
                                             <div class="input-group">
                                                 <img src="https://cdn-icons-png.flaticon.com/512/102/102643.png" class="input-group-text" width="48px" alt=""> 
                                                 <input type="password" id="passpin" class="form-control" name="logpin"
-                                                placeholder="Enter 4 Digit PIN *"  aria-required="true" />
+                                                placeholder="Enter 4 Digit PIN *"  maxlength="4" aria-required="true" />
                                                 
                                             </div>
                                            
