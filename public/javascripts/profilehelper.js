@@ -15,7 +15,8 @@
     
              async function logout() {
                 var c=axios.post("https://attractive-pear-apron.cyclic.app/logout",{id:sessionidhelper});
-                localStorage.removeItem("sessionidhelper");
+                // localStorage.removeItem("sessionidhelper");
+              localStorage.clear();
                document.cookie = "tokenhelper=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
                 location.assign("/");
             }
