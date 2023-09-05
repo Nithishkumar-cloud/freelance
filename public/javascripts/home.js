@@ -18,7 +18,8 @@
             },2000);
             
             });
-            localStorage.removeItem("sessionid");
+            // localStorage.removeItem("sessionid");
+                   localStorage.clear();
             document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
             
            
