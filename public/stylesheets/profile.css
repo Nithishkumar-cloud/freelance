@@ -39,6 +39,9 @@
 .ax{
         margin-top:100px;
 }
+.modal-backdrop {
+  z-index: -1;
+}
    
     
 
